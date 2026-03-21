@@ -1,0 +1,35 @@
+--XML:
+
+-GameConstants: 
+    -<ShowUnitAIPlanAttachment> zu true
+-GameObjectFiles:
+    -ProDR_Units.xml
+    -ProDR_Structures.xml
+    -ProDR_Heroes.xml
+-HardPointDataFiles:
+    -Hardpoints_ProDR.xml
+-SFXEventFiles:
+    -SFXEvents_ProDR.xml
+
+-Event_Dummies:
+    -"Warlord_Choice_CIS_Remnants" --TBD: unit tooltips, icon
+-CommandBarComponents_TR:
+    -"faction_60" --TBD: icons
+    -"disabled_faction_60"
+
+
+
+
+--LUA
+
+-OptionsHandler:
+    -Cheats enabled
+-GCMenuTranslator:
+    -Cis_Remnants an 2 Stellen
+-GCMenu_ProteusbyMapEra:
+    -FullLarge E1,2
+    -FullMedium E2
+    -KnownLarge E1,3
+    -KnownMedium E1,3
+-ProteusWarlordLibrary:
+    -"CIS_REMNANTS"
