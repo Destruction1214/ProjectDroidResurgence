@@ -12,10 +12,12 @@
     -SFXEvents_ProDR.xml
 
 -Event_Dummies:
-    -"Warlord_Choice_CIS_Remnants" --TBD: unit tooltips, icon
+    -"Warlord_Choice_CIS_Remnants" --TBD: unit tooltips
 -CommandBarComponents_TR:
-    -"faction_60" --TBD: icons
+    -"faction_60"
     -"disabled_faction_60"
+-Factions:
+    -faction color Proteus changed to FotR CIS Blue
 
 
 
@@ -33,3 +35,15 @@
     -KnownMedium E1,3
 -ProteusWarlordLibrary:
     -"CIS_REMNANTS"
+-WarlordStart:
+    -if "entry.SwapStructures" added (thx to Greene) (2 instances)
+-GameConstans:
+    -faction color Proteus changed to FotR CIS Blue
+
+
+
+
+-- ART
+
+-i_proteus_submenu.alo (thx to Greene)
+-ported p_allied_cis.alo from FotR (inkl. Texture)

@@ -526,13 +526,24 @@ return {
 			FriendlyName = "Separatist Remnants",
 			Planets = {"HYPORI"},
 			LeaderTable = {"NO_LEGITIMACY"},
-			LeaderEndingNames = {},
+			LeaderEndingNames = {""},
 			HeroList = {},
 			FighterHero = {},
-			RemoveList = {},
-			UnlockList = {},
-			LockList = {},
+			--replace unlock list with CIS_ structures
+			UnlockList = {"NewRep_Capital", "Rebel_Office", "R_Ground_Barracks", "R_Ground_Light_Vehicle_Factory", "R_Ground_Heavy_Vehicle_Factory", "NewRepublic_Shipyard_Level_One", "NewRepublic_Shipyard_Level_Two", "NewRepublic_Shipyard_Level_Three", "NewRepublic_Shipyard_Level_Four"},
+			LockList = {
+				"Imperial_Army_Guard_Company", "Imperial_Army_Trooper_Company", "Raptor_Trooper_Company",
+				"Imperial_74Z_Bike_Company", "Imperial_AT_AP_Walker_Company", "Imperial_AT_PT_Company", "AT_MP_Company", "AT_ST_Company", "Chariot_LAV_Company", "AT_AA_Walker_Company", "TIE_Crawler_Company", "S_1_Firehawke_Company",
+				"Deathhawk_Company", "SPMAG_Walker_Company", "Imperial_Dropship_Transport_Company", "PX4_Company", "Imperial_A5_Juggernaut_Company", "Imperial_AT_AT_Walker_Company",
+				"Interdictor_Star_Destroyer", "Imperial_I_Star_Destroyer", "Imperial_II_Star_Destroyer", "Allegiance_Battlecruiser", "Executor_Star_Dreadnought",
+				"Pursuit_Light_Cruiser", "Imperial_DHC", "Vindicator_Cruiser", "Dragon_Heavy_Cruiser", "Acclamator_II", "Immobilizer_418", "Acclamator_I_Carrier", "Victory_I_Star_Destroyer", "Victory_II_Star_Destroyer", "Bulwark_I", "Procursator_Star_Destroyer", "Venator_Star_Destroyer",
+				"Raider_I_Corvette", "Charger_C70", "CR92A", "Lancer_Frigate", "Marauder_Cruiser", "Carrack_Cruiser", "Ton_Falk_Escort_Carrier", "Star_Galleon", "Strike_Cruiser", "Eidolon",
+				"Imperial_Proteus_Capital", "Imperial_Proteus_Office", "I_Ground_Barracks", "I_Ground_Light_Vehicle_Factory", "I_Ground_Heavy_Vehicle_Factory", "I_Ground_Advanced_Vehicle_Factory", "Imperial_Proteus_Shipyard_Level_One", "Imperial_Proteus_Shipyard_Level_Two", "Imperial_Proteus_Shipyard_Level_Three", "Imperial_Proteus_Shipyard_Level_Four"
+			},
 			IntroText = {"TEXT_CONQUEST_CIS_REMNANTS"},
-			IntroHolo = ""
+			IntroHolo = "",
+			PlanetParticle = "CIS_Allies",
+			SwapStructures = {"Imperial_Proteus_Capital", "Imperial_Proteus_Office", "I_Ground_Barracks", "I_Ground_Light_Vehicle_Factory", "I_Ground_Heavy_Vehicle_Factory", "I_Ground_Advanced_Vehicle_Factory", "Imperial_Proteus_Shipyard_Level_One", "Imperial_Proteus_Shipyard_Level_Two", "Imperial_Proteus_Shipyard_Level_Three", "Imperial_Proteus_Shipyard_Level_Four"},
+			StoryEvent = "",
 		},
 }
