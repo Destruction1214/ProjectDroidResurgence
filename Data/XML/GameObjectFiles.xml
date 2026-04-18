@@ -187,9 +187,9 @@
 	
 	<File>Heroes\EotH_Heroes.xml</File>
 	
-	<File>Units\ProDR_Units.xml</File>
-	<File>Structures\ProDR_Structures.xml</File>
-	<File>Heroes\ProDR_Heroes.xml</File>
+	<File>Units\Units_ProDR.xml</File>
+	<File>Structures\Structures_ProDR.xml</File>
+	<File>Heroes\Heroes_ProDR.xml</File>
 
 	<File>Particles\TR_Particles_Abilities.xml</File>
 	<File>Projectiles\TR_Projectiles_SpecialAbility.xml</File>

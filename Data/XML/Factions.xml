@@ -9090,12 +9090,12 @@
 	<Faction Name="Imperial_Proteus">
 		<Text_ID> TEXT_FACTION_WARLORDS </Text_ID>
 
-		<Color>                              54, 134, 242, 255 </Color>
-		<No_Colorization_Color>              54, 134, 242, 255 </No_Colorization_Color>
-		<Display_Font_Color>                 54, 134, 242, 255 </Display_Font_Color>
-		<Space_Retreat_Countdown_Color_RGBA> 54, 134, 242, 255 </Space_Retreat_Countdown_Color_RGBA>
-		<Land_Retreat_Countdown_Color_RGBA>  54, 134, 242, 255 </Land_Retreat_Countdown_Color_RGBA>
-		<Selection_Blob_RGBA>                54, 134, 242, 255 </Selection_Blob_RGBA>
+		<Color>                              44, 121, 216, 255 </Color>
+		<No_Colorization_Color>              44, 121, 216, 255 </No_Colorization_Color>
+		<Display_Font_Color>                 44, 121, 216, 255 </Display_Font_Color>
+		<Space_Retreat_Countdown_Color_RGBA> 44, 121, 216, 255 </Space_Retreat_Countdown_Color_RGBA>
+		<Land_Retreat_Countdown_Color_RGBA>  44, 121, 216, 255 </Land_Retreat_Countdown_Color_RGBA>
+		<Selection_Blob_RGBA>                44, 121, 216, 255 </Selection_Blob_RGBA>
 
 		<Infantry_Icon_Name>i_button_army_trooper.tga</Infantry_Icon_Name>
 		<Tech_Tree_Dialog_Name>IDD_TECH_TREE_IMPERIAL_PROTEUS</Tech_Tree_Dialog_Name>

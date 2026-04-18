@@ -17615,7 +17615,7 @@
         <Scale_Factor>1.45</Scale_Factor>
         <Name_Adjust>-12, -12, 0.1</Name_Adjust>
 
-        <Planet_Credit_Value>0</Planet_Credit_Value>
+        <Planet_Credit_Value>350</Planet_Credit_Value>
         <Planet_Destroyed_Credit_Value>0</Planet_Destroyed_Credit_Value>
         <Planet_Capture_Bonus_Reward></Planet_Capture_Bonus_Reward>
         <Additional_Population_Capacity>21</Additional_Population_Capacity>
