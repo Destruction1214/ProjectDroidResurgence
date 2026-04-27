@@ -1,7 +1,12 @@
 {
   "diagnostics": {
     "disable": [
-      "undefined-global"
+      "undefined-global",
+      "unnecessary-if",
+      "unresolved-require",
+      "deprecated",
+      "access-invisible",
+      "global-in-non-module"
     ]
   }
 }

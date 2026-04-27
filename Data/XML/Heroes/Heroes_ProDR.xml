@@ -1,5 +1,144 @@
 <?xml version="1.0"?>
 <ProDR_Heroes>
 
-    <HeroUnit Name="temphero"></HeroUnit>
+<!--Hypori-->
+
+    <UniqueUnit Name="Hypori_Omni">
+		<Variant_Of_Existing_Type>DH_Omni_Heavy</Variant_Of_Existing_Type>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Text_ID>TEXT_HERO_HYPORI</Text_ID>
+		<Ground_Override_Unit>Hypori_Team</Ground_Override_Unit> 
+		<Encyclopedia_Text>
+			TEXT_TOOLTIP_SEPARATOR_TRAITS_BLOCK
+			TEXT_TOOLTIP_TRAIT_COMMAND_TIER_05_SPACE
+			TEXT_TOOLTIP_SEPARATOR_BIO_BLOCK
+			TEXT_TOOLTIP_HYPORI
+			TEXT_TOOLTIP_SEPARATOR_COMMANDS_BLOCK
+			TEXT_TOOLTIP_COMMAND_CLAW_OF_BACTOID
+			TEXT_TOOLTIP_SEPARATOR_STAT_BLOCK
+			TEXT_TOOLTIP_DH_OMNI_HEAVY_HULL
+			TEXT_TOOLTIP_DH_OMNI_HEAVY_SHIELD
+			TEXT_TOOLTIP_DH_OMNI_HEAVY_MOVE
+			TEXT_TOOLTIP_DH_OMNI_HEAVY_WEAP1
+			TEXT_TOOLTIP_DH_OMNI_HEAVY_WEAP2
+			TEXT_TOOLTIP_SEPARATOR_ABILITY_BLOCK
+			TEXT_TOOLTIP_DH_OMNI_HEAVY_SUPPORT
+			TEXT_TOOLTIP_SEPARATOR_BONUS_BLOCK
+			TEXT_TOOLTIP_HYPORI_UPGRADE
+			TEXT_TOOLTIP_DH_OMNI_HEAVY_TENDER
+			TEXT_TOOLTIP_SEPARATOR_CAPABILITIES_BLOCK
+			TEXT_TOOLTIP_CAPABILITY_ORBITAL_BOMBARDMENT
+		</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_CAPTAIN</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_HERO_HYPORI.TGA</Icon_Name>
+	
+		<Ranking_In_Category>3</Ranking_In_Category>
+	
+		<Tech_Level>99</Tech_Level>
+		<Population_Value>28</Population_Value>
+		<CategoryMask>SpaceHero | AntiFrigate</CategoryMask>
+		<Property_Flags>GTSImmune</Property_Flags>
+	
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>BARRAGE</Type>
+				<Projectile_Types_Override />
+
+				<Expiration_Seconds>15</Expiration_Seconds>
+				<Recharge_Seconds>120</Recharge_Seconds>
+				<Mod_Multiplier>FIRE_RATE_MULTIPLIER,		2.5f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER,	0.33f</Mod_Multiplier>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.25f</Mod_Multiplier>
+
+                <SFXEvent_Target_Ability> Unit_Attack_Captain_Pellaeon </SFXEvent_Target_Ability>
+
+                <!-- keep this the same as Targeting_Fire_Inaccuracy_Fixed_Radius_Override -->
+                <Area_Effect_Decal_Distance> 300.0 </Area_Effect_Decal_Distance>
+
+                <!-- keep this the same as Area_Effect_Decal_Distance -->
+				<Targeting_Fire_Inaccuracy_Fixed_Radius_Override>100</Targeting_Fire_Inaccuracy_Fixed_Radius_Override>
+
+				<Target_Position_Z_Offset>0</Target_Position_Z_Offset>
+			</Unit_Ability>
+
+			<!-- Harmonic Bomb Heal Ability -->
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Spawned_Object_Type>Proj_Fleet_Tender_Fighter_Heal</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>0.0</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Force_Area_Heal</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FLEET_TENDER_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_FLEET_TENDER_DESCRIPTION</Alternate_Description_Text>
+				<Alternate_Icon_Name>i_sa_repair_vehicle.tga</Alternate_Icon_Name>
+				<Supports_Autofire>Yes</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+			<!-- Healing Aura -->
+			<Force_Healing_Ability Name="DH_Omni_Fleet_Tender">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Heal_Range>2000.0</Heal_Range>
+				<Heal_Amount>130.0</Heal_Amount>
+				<Heal_Interval_In_Secs>1.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Space_Repair_Radius_Overlay</Heal_Range_Blob_Material>
+				<Applicable_Unit_Categories>Gunship, Corvette, Frigate, Capital, SuperCapital, SpaceHero, Transport</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Effect>Shield_Sparks_Medium</Target_Particle_Effect>
+				<Target_Particle_Bone_Name>B_TURRET, TURRET_00, B_TURRET_BASE</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 1.2, 2.0</Target_Light_Effect_Color>
+				<Target_Light_Effect_Color2 />
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 2.0</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2 />
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+
+			<!-- Fighter Support Aura -->
+			<Combat_Bonus_Ability Name="DCS_Fighter_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Categories>Fighter, Bomber</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Excluded_Unit_Types />
+				<Damage_Bonus_Percentage>0.05</Damage_Bonus_Percentage>
+				<Health_Bonus_Percentage>0.05</Health_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.05</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.05</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.05</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>3</Stacking_Category>
+			</Combat_Bonus_Ability>
+	
+			<Combat_Bonus_Ability Name="Command_Tier_05_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Excluded_Unit_Types>Ground_Ion_Cannon, Ground_Hypervelocity_Gun</Excluded_Unit_Types>
+				<Damage_Bonus_Percentage>0.15</Damage_Bonus_Percentage>
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.15</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.15</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+
+			<Battlefield_Modifier_Ability Name="Command_Tier_05_FOW_Increase">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<FOW_Reveal_Range_Multiplier>1.15</FOW_Reveal_Range_Multiplier>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>0</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+		</Abilities>
+
+		<Apply_Special_Ability_To_Self_On_Creation>Yes</Apply_Special_Ability_To_Self_On_Creation>
+	</UniqueUnit>
+
 </ProDR_Heroes>

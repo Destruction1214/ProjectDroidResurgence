@@ -193,13 +193,7 @@ function WarlordStart:Populate_Chosen_Faction(choice, cosmetic)
 			local locale = FindPlanet(planet)
 			local owner = locale.Get_Owner()
 			if owner == Find_Player("Warlords") or (entry.FactionOverride and owner == Find_Player(entry.FactionOverride)) or (entry.FactionOverride2 and owner == Find_Player(entry.FactionOverride2)) or (entry.FactionOverride3 and owner == Find_Player(entry.FactionOverride3)) then
-				--ProDR
-				if entry.SwapStructures then
-					ChangePlanetOwnerAndRetreat(locale, self.warlord_player, nil, 1)
-				else
-					ChangePlanetOwnerAndRetreatHeroes(locale, self.warlord_player, nil, 2)
-				end
-				--/
+				ChangePlanetOwnerAndRetreatHeroes(locale, self.warlord_player, nil, 2)
 				if spawncapital then
 					spawncapital = false
 					SpawnList({self.capital},locale,self.warlord_player,true,false)
@@ -226,11 +220,12 @@ function WarlordStart:Populate_Chosen_Faction(choice, cosmetic)
 			local partial_structure_string = ""
 			local new_structure_string = ""
 			if choice == "CIS_REMNANTS" then
-				UnitUtil.SetLockList(self.warlord_name, {self.capital}, false)
-				--UnitUtil.SetLockList(self.warlord_name, {"CIS_Capital"})
+				--UnitUtil.SetLockList(self.warlord_name, {self.capital}, false) --done by locklist for now
+				--UnitUtil.SetLockList(self.warlord_name, {"CIS_Capital"}) --structure missing
 				if string.find(structure, "Imperial_Proteus_") then
 					partial_structure_string = string.gsub(structure, "Imperial_Proteus_", "")
 					--new_structure_string = "CIS_"..partial_structure_string
+					new_structure_string = "Empire_"..partial_structure_string
 					local oldlist = Find_All_Objects_Of_Type(structure)
 					for _, old in pairs(oldlist) do
 						local planet = old.Get_Planet_Location()			
@@ -244,6 +239,7 @@ function WarlordStart:Populate_Chosen_Faction(choice, cosmetic)
 				elseif string.find(structure, "I_Ground_") then
 					partial_structure_string = string.gsub(structure, "I_Ground_", "")
 					--new_structure_string = "CIS_Ground_"..partial_structure_string
+					new_structure_string = "E_Ground_"..partial_structure_string
 					local oldlist = Find_All_Objects_Of_Type(structure)
 					for _, old in pairs(oldlist) do
 						local planet = old.Get_Planet_Location()			
