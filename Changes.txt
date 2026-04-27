@@ -27,7 +27,7 @@
 -OptionsHandler:
     -Cheats enabled
 -GCMenuTranslator:
-    -Cis_Remnants an 2 Stellen
+    -CIS_Remnants (2x)
 -GCMenu_ProteusbyMapEra:
     -FullLarge E1,2
     -FullMedium E2
@@ -39,6 +39,9 @@
     -if "entry.SwapStructures" added (thx to Greene) (2 instances)
 -GameConstans:
     -faction color Proteus changed to FotR CIS Blue
+-UnitSpawnerTables:
+    -Hypori CIS rosteroverride added (2x)
+-CIS.lua in spawn-sets added
 
 
 
