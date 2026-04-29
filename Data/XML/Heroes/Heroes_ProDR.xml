@@ -369,7 +369,7 @@
 		<Mass>1.0</Mass>
 		<Type>Walk</Type>
 
-		<Affiliation>Rebel</Affiliation>
+		<Affiliation>Imperial_Proteus</Affiliation>
 		<Political_Faction>Rebel</Political_Faction>
 		<IsBuildable>No</IsBuildable>
 		<Size_Value>10</Size_Value>
@@ -649,7 +649,7 @@
 		<Lua_Script>GenericGameObject</Lua_Script>
 
 		<Tech_Level>99</Tech_Level>
-		<Affiliation>Rebel</Affiliation>
+		<Affiliation>Imperial_Proteus</Affiliation>
 
 		<Tactical_Health>3600</Tactical_Health>
 		<Shield_Points>3500</Shield_Points>
@@ -770,7 +770,7 @@
 		<Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
 		<Type>Walk</Type>
 		<Deploys>No</Deploys>
-		<Affiliation>Rebel</Affiliation>
+		<Affiliation>Imperial_Proteus</Affiliation>
 		<GUI_Bracket_Size>0</GUI_Bracket_Size>
 		<Tactical_Health>235</Tactical_Health>
 		<Damage>150</Damage>
@@ -893,7 +893,7 @@
 		<Population_Value>1</Population_Value>
 		<Land_Override_Population_Value>1</Land_Override_Population_Value>
 		<Damage>150</Damage>
-		<Affiliation>Rebel</Affiliation>
+		<Affiliation>Imperial_Proteus</Affiliation>
 		<Tech_Level>0</Tech_Level>
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
 		
@@ -960,7 +960,7 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_DROID </Encyclopedia_Unit_Class>
 		<Icon_Name>I_BUTTON_IG104.tga</Icon_Name>
 
-		<Affiliation>Rebel</Affiliation>
+		<Affiliation>Imperial_Proteus</Affiliation>
 
 		<Behavior>DUMMY_STARSHIP, TRANSPORT </Behavior>
 		<LandBehavior>REVEAL, HIDE_WHEN_FOGGED, IDLE</LandBehavior> 
