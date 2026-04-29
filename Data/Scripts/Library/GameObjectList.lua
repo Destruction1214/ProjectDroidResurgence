@@ -865,6 +865,8 @@ return {
 
 -- custom heroes
 ["HYPORI_OMNI"] = true,
+["HYPORI_OMNI2"] = true,
+["K2B4_PROVIDENCE"] = true,
 
 -- custom ships
 ["DH_OMNI"] = true,
@@ -876,4 +878,14 @@ return {
 ["MUNIFICENT_C3_CIS"] = true,
 ["RECUSANT_CIS"] = true,
 ["CAPTOR_CIS"] = true,
+["MUNIFICENT_HEAVY_CRUISER_CIS"] = true,
+["BULWARK_I_CIS"] = true,
+["BULWARK_II_CIS"] = true,
+["PROVIDENCE_CARRIER_DESTROYER_CIS"] = true,
+["PROVIDENCE_DREADNOUGHT"] = true,
+["RECUSANT_DREADNOUGHT"] = true,
+["LUCREHULK_CARRIER_CIS"] = true,
+["LUCREHULK_BATTLESHIP_CIS"] = true,
+["LUCREHULK_CARRIER_CONTROL_CIS"] = true,
+["SUBJUGATOR"] = true,
 }

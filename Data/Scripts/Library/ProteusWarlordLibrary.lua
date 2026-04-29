@@ -527,7 +527,7 @@ return {
 			Planets = {"HYPORI"},
 			LeaderTable = {"NO_LEGITIMACY"},
 			LeaderEndingNames = {""},
-			HeroList = {},
+			HeroList = {"Hypori_Team", "K2B4_Providence", "IG104_Team"},
 			FighterHero = {},
 			--replace unlock list with CIS_ structures
 			UnlockList = {"NewRep_Capital", "Rebel_Office", "R_Ground_Barracks", "R_Ground_Light_Vehicle_Factory", "R_Ground_Heavy_Vehicle_Factory", "NewRepublic_Shipyard_Level_One", "NewRepublic_Shipyard_Level_Two", "NewRepublic_Shipyard_Level_Three", "NewRepublic_Shipyard_Level_Four"},
