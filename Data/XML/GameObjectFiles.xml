@@ -190,6 +190,7 @@
 	<File>Units\Units_ProDR.xml</File>
 	<File>Structures\Structures_ProDR.xml</File>
 	<File>Heroes\Heroes_ProDR.xml</File>
+	<File>Projectiles\Projectiles_ProDR.xml</File>
 
 	<File>Particles\TR_Particles_Abilities.xml</File>
 	<File>Projectiles\TR_Projectiles_SpecialAbility.xml</File>
