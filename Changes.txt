@@ -3,9 +3,10 @@
 -GameConstants: 
     -<ShowUnitAIPlanAttachment> zu true
 -GameObjectFiles:
-    -ProDR_Units.xml
-    -ProDR_Structures.xml
-    -ProDR_Heroes.xml
+    -Units_ProDR.xml
+    -Structures_ProDR.xml
+    -Heroes_ProDR.xml
+    -Projectiles_ProDR.xml
 -HardPointDataFiles:
     -Hardpoints_ProDR.xml
 -SFXEventFiles:
@@ -18,6 +19,8 @@
     -"disabled_faction_60"
 -Factions:
     -faction color Proteus changed to FotR CIS Blue
+-PerceptuaLEquations:
+    -das übliche (CIS Ground Structures)
 
 
 
