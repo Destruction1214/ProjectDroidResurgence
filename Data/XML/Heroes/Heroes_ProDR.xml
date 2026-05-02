@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 <ProDR_Heroes>
 
+	<Material name="Highlight_CIS_Hero">
+		<Texture_Name>i_highlight_cis_hero.tga</Texture_Name>
+		<Render_Mode>ALPHA</Render_Mode>
+	</Material>
+
 <!--Hypori-->
 
 	<DummyStructure Name="Hypori_Swap1">
@@ -62,7 +67,6 @@
 			TEXT_TOOLTIP_SEPARATOR_ABILITY_BLOCK
 			TEXT_TOOLTIP_DH_OMNI_HEAVY_SUPPORT
 			TEXT_TOOLTIP_SEPARATOR_BONUS_BLOCK
-			TEXT_TOOLTIP_HYPORI_UPGRADE
 			TEXT_TOOLTIP_DH_OMNI_HEAVY_TENDER
 			TEXT_TOOLTIP_SEPARATOR_CAPABILITIES_BLOCK
 			TEXT_TOOLTIP_CAPABILITY_ORBITAL_BOMBARDMENT
@@ -896,7 +900,6 @@
 		<Affiliation>Imperial_Proteus</Affiliation>
 		<Tech_Level>0</Tech_Level>
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		
 		
 		<GUI_Row> 1 </GUI_Row>
 		<Build_Cost_Credits>1500</Build_Cost_Credits>

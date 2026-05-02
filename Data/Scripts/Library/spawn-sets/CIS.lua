@@ -33,11 +33,11 @@ return {
 	-- 	,{"SD_9_Droid_Company", 0.1, StartYear = 9}
 	-- },
 	Groundbase_Table = {
-		"E_Ground_Barracks",
-		"E_Ground_Barracks",
-		"E_Ground_Light_Vehicle_Factory",
-		"E_Ground_Heavy_Vehicle_Factory",
-		"E_Ground_Advanced_Vehicle_Factory",
+		"CIS_Ground_Barracks",
+		"CIS_Ground_Barracks",
+		"CIS_Ground_Light_Vehicle_Factory",
+		"CIS_Ground_Heavy_Vehicle_Factory",
+		"CIS_Ground_Advanced_Vehicle_Factory",
 	},
 	Starbase_Table = {
 		"Empire_Star_Base_1",
@@ -47,12 +47,12 @@ return {
 		"Empire_Star_Base_5",
 	},
 	Shipyard_Table = {
-		"Empire_Shipyard_Level_One",
-		"Empire_Shipyard_Level_Two",
-		"Empire_Shipyard_Level_Three",
-		"Empire_Shipyard_Level_Four",
+		"CIS_Shipyard_Level_One",
+		"CIS_Shipyard_Level_Two",
+		"CIS_Shipyard_Level_Three",
+		"CIS_Shipyard_Level_Four",
 	},
 	Defenses_Table = require("spawn-sets/GOLANS"),
-	Government_Building = "Empire_Office",
+	Government_Building = "CIS_Office",
 	GTS_Building = "Ground_Hypervelocity_Gun"
 }

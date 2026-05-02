@@ -44,6 +44,11 @@
 									Parameter_Type = "Revolt_Urban_Capital",
 									Parameter_Type = "Revolt_Mercenary_Capital",
 									Parameter_Type = "Revolt_Corporate_Capital",
+									Parameter_Type = "CIS_Space_Capital",
+									Parameter_Type = "CIS_Space_Capital2",
+									Parameter_Type = "CIS_Space_Capital3",
+									Parameter_Type = "CIS_Space_Capital4",
+									Parameter_Type = "CIS_Space_Capital5",
 									Parameter_Only_Consider_Complete = 1.0}
 	</Capital_Count>
 

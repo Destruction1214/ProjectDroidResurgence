@@ -1,10 +1,10 @@
 return {
 	Ship_Crew_Requirement = 23,
 	Fighters = {
-		["VULTURE_SQUADRON"] = {
+		["LIGHT_FIGHTER"] = {
 			DEFAULT = {Initial = 1, Reserve = 1}
 		},
-		["HYENA_SQUADRON"] = {
+		["BOMBER2"] = {
 			DEFAULT = {Initial = 1, Reserve = 2}
 		}
 	},

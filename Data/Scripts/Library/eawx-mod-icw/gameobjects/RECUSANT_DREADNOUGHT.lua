@@ -1,7 +1,7 @@
 return {
 	Ship_Crew_Requirement = 960,
 	Fighters = {
-		["VULTURE_SQUADRON"] = {
+		["HEAVY_FIGHTER"] = {
 			DEFAULT = {Initial = 1, Reserve = 2}
 		}
 	},

@@ -1144,6 +1144,16 @@
 				(Variable_Self.HasStructure{Parameter_Type = "Yevetha_Capital", Parameter_Only_Consider_Complete = 1.0} * Variable_Self.IsFaction{Parameter_Faction = "Yevetha"})
 				+
 				(Variable_Self.HasStructure{Parameter_Type = "CIS_Capital", Parameter_Only_Consider_Complete = 1.0} * Variable_Self.IsFaction{Parameter_Faction = "Imperial_Proteus"})
+				+
+				(Variable_Self.HasStructure{Parameter_Type = "CIS_Space_Capital", Parameter_Only_Consider_Complete = 1.0} * Variable_Self.IsFaction{Parameter_Faction = "Imperial_Proteus"})
+				+
+				(Variable_Self.HasStructure{Parameter_Type = "CIS_Space_Capital2", Parameter_Only_Consider_Complete = 1.0} * Variable_Self.IsFaction{Parameter_Faction = "Imperial_Proteus"})
+				+
+				(Variable_Self.HasStructure{Parameter_Type = "CIS_Space_Capital3", Parameter_Only_Consider_Complete = 1.0} * Variable_Self.IsFaction{Parameter_Faction = "Imperial_Proteus"})
+				+
+				(Variable_Self.HasStructure{Parameter_Type = "CIS_Space_Capital4", Parameter_Only_Consider_Complete = 1.0} * Variable_Self.IsFaction{Parameter_Faction = "Imperial_Proteus"})
+				+
+				(Variable_Self.HasStructure{Parameter_Type = "CIS_Space_Capital5", Parameter_Only_Consider_Complete = 1.0} * Variable_Self.IsFaction{Parameter_Faction = "Imperial_Proteus"})
 	</Player_Has_Capital_Building>
 
 	<Is_Important_Planet>
