@@ -1,13 +1,13 @@
 return {
 	Ship_Crew_Requirement = 270,
 	Fighters = {
-		["VULTURE_SQUADRON_DOUBLE"] = {
+		["LIGHT_FIGHTER_DOUBLE"] = {
 			DEFAULT = {Initial = 1, Reserve = 1}
 		},
-		["TRIFIGHTER_SQUADRON_HALF"] = {
+		["ELITE_INTERCEPTOR_HALF"] = {
 			DEFAULT = {Initial = 1, Reserve = 1}
 		},
-		["HYENA_SQUADRON_DOUBLE"] = {
+		["LIGHT_FIGHTERBOMBER_DOUBLE"] = {
 			DEFAULT = {Initial = 1, Reserve = 1}
 		}
 	},

@@ -5,20 +5,32 @@ TEXT_BX_COMMANDO_COMPANY,BX Commando Droid Platoon
 TEXT_BX_COMMANDO_SNIPER_SQUAD,BX Commando Droid Sniper Squad
 TEXT_BX_COMMANDO_SQUAD,BX Commando Droid Squad
 TEXT_BX_COMMANDO_WEAPONS_SQUAD,BX Commando Droid Weapons Squad
+TEXT_COMPANY_CIS_CAPITAL,Heart of the Confederacy
+TEXT_COMPANY_CIS_SPACE_CAPITAL,Lucrehulk Goliath
+TEXT_COMPANY_CISSC_DESCRIPTION,Lucrehulk Goliath serves as a bastion of resistance for the Separatist Remnants. It provides a discount on all military hardware and can be upgraded.
+TEXT_COMPANY_CORPORATEHQ,Corporate Headquarters
 TEXT_CONQUEST_CIS_REMNANTS, --intro speech--
 TEXT_COYOTE_BOMBER_SQUADRON,Coyote Advanced Droid Bomber Squadron
 TEXT_COYOTE_BOMBER_SQUADRON_HALF,Coyote Advanced Droid Bomber Squadron 1/2
 TEXT_COYOTE_BOMBER_SQUADRON2,Coyote Advanced Droid Bomber Squadron x2
 TEXT_CRAB_DROID_COMPANY,Crab Droid Company
 TEXT_CRAB_DROID_SQUAD,Crab Droid Squad
+TEXT_DISPLAY_CIS_SPACE_CAPITAL,Construction Station: Lucrehulk Goliath
 TEXT_EG_BX_COMMANDO_SQUAD,Elite Guard BX Commando Droid Squad
 TEXT_EVENT_WARLORD_CHOICE_CIS_REMNANTS,Separatist Remnants
+TEXT_GROUND_CIS_ADVANCED_VEHICLE_FACTORY,Droid Heavy Vehicle Factory
+TEXT_GROUND_CIS_BARRACKS,Droid Infantry Factory
+TEXT_GROUND_CIS_HEAVY_VEHICLE_FACTORY,Piloted Vehicle Factory
+TEXT_GROUND_CIS_LIGHT_VEHICLE_FACTORY,Droid Vehicle Factory
+TEXT_GROUND_SECURITYDROID_FACTORY,Security Droid Factory
 TEXT_HERO_HYPORI,Hypori
 TEXT_HERO_K2B4,K2-B4
 TEXT_HYENA_SQUADRON,Hyena Bomber Squadron
 TEXT_HYENA_SQUADRON_HALF,Hyena Bomber Squadron 1/2
 TEXT_HYENA_SQUADRON2,Hyena Bomber Squadron x2
-TEXT_PORAX_SQUADRON,Rogue-class Porax-38 starfighter Squadron
+TEXT_PORAX_SQUADRON,Porax-38 Starfighter Squadron
+TEXT_PORAX_SQUADRON_HALF,Porax-38 Starfighter Squadron 1/2
+TEXT_PORAX_SQUADRON2,Porax-38 Starfighter Squadron x2
 TEXT_PROTEUS_DESCRIPTION_CIS_REMNANTS, --desc in select menu--
 TEXT_STATBLOCK_ADVANCED_ESTAP_BASE,Health: 11 | Shields: 4
 TEXT_STATBLOCK_ADVANCED_ESTAP_MOVE,Speed: 5.57 | Maneuverability: 4.65
@@ -48,7 +60,9 @@ TEXT_STATBLOCK_HYENA_WEAP2,1x Fighter Concussion Missile (AF): 1 / 50.0s / 1.8km
 TEXT_STATBLOCK_HYENA_WEAP3,1x Light Proton Rocket (AC): 1 / 25.0s / 3.0km
 TEXT_STATBLOCK_HYENA_WEAP4,1x Light Concussion Bomb (AC): 1 / 37.5s / 0.8km
 TEXT_STATBLOCK_PORAX_BASE,Health: 20 | Shield: 15
-TEXT_STATBLOCK_PORAX_SQUADRON,Squadron: 24x Rogue-class Porax-38 starfighter
+TEXT_STATBLOCK_PORAX_SQUADRON,Squadron: 24x Porax-38 Starfighter
+TEXT_STATBLOCK_PORAX_SQUADRON_DOUBLE,Squadron: 48x Porax-38 Starfighter
+TEXT_STATBLOCK_PORAX_SQUADRON_HALF,Squadron: 12x Porax-38 Starfighter
 TEXT_STATBLOCK_TRIFIGHTER_BASE,Health: 10 | Unshielded
 TEXT_STATBLOCK_TRIFIGHTER_MOVE,Speed: 7.4 | Maneuverability: 5.65
 TEXT_STATBLOCK_TRIFIGHTER_SQUADRON,Squadron: 12x Droid Tri-Fighter
@@ -66,11 +80,28 @@ TEXT_STATBLOCK_VULTURE_SQUADRON_HALF,Squadron: 12x Vulture Droid-I
 TEXT_STATBLOCK_VULTURE_WEAP1,1x Fighter Laser Cannon: 4 / 3.0s / 1.0km
 TEXT_STATBLOCK_VULTURE_WEAP2,1x Fighter Concussion Missile: 1 / 75.0s / 1.8km
 TEXT_STATBLOCK_XANADU_WEAP1,1x Fighter Laser Cannon: 4 / 1.3s / 2.0km
+TEXT_TOOLTIP_A_FACTORY_CIS_1,Multi-Troop Transport: 1 / 1
 TEXT_TOOLTIP_ADVANCED_ESTAP,The most refined form of an outdated Trade Federation starbomber. In contrast to other droid bomber craft, the E-STAP Series is very well armed even compared to piloted bombers of the time, but presents a much slower target in comparison. Incorporates additional secondary weapons and heftier protection when compared with previous models.
+TEXT_TOOLTIP_B3,A towering upgrade of the B2 Super Battle Droid, the B3 dwarfs most humanoids and brings overwhelming firepower to the battlefield. It's a serious threat to infantry and still dangerous to Jedi - though not as specialized as the C-B3 Cortosis Droid. Armed with wrist blasters, flamethrowers, rockets, and even some anti-air support, it's built to dominate ground combat.
+TEXT_TOOLTIP_B3_COMPANY,Squad: 1x B3 Ultra Battle Droid
+TEXT_TOOLTIP_B3_HEALTH,Health: 290 (Droid)
+TEXT_TOOLTIP_B3_MOVE,Speed: 0.7
+TEXT_TOOLTIP_B3_PROTOTYPE,Avatar-6 is the predecessor to Avatar-7, better known as the B3 Ultra Combat Droid. It embodies many of the characteristics of the later model, but remains in the testing phase and may potentially fail on the battlefield.
+TEXT_TOOLTIP_B3_PROTOTYPE_COMPANY,Squad: 1x Avatar-6
+TEXT_TOOLTIP_B3_PROTOTYPE_HEALTH,Health: 250 (Droid)
+TEXT_TOOLTIP_B3_WEAP1,2x Modified Wrist Blaster: 2 / 1.25s / 355m 
+TEXT_TOOLTIP_B3_WEAP2,1x Wrist Flamethrower: 15 / 5.0s / 370m 
+TEXT_TOOLTIP_B3_WEAP3,1x Modified Wrist Rocket: 3 / 8.0s / 355m 
+TEXT_TOOLTIP_B3_WEAP4,1x Anti Air Missile: 2 / 2.2s / 400m 
+TEXT_TOOLTIP_B3_WEAP5,2x Light combat Cannon: 1 / 2.25s / 250m 
+TEXT_TOOLTIP_BARRACKS_CIS_2,B1 Security Battle Droid Squad: 2 / ∞
+TEXT_TOOLTIP_BARRACKS_CIS_3,B2 Super Battle Droid Squad: 1 / ∞
+TEXT_TOOLTIP_BARRACKS_CIS_7,Q-Series Destroyer Droid: 5 / 10
 TEXT_TOOLTIP_BONUS_DUEL_TRAINING_20,Duelist: 20% chance to redirect infantry blaster fire
 TEXT_TOOLTIP_BONUS_DUEL_TRAINING_30,Duelist: 30% chance to redirect infantry blaster fire
 TEXT_TOOLTIP_BONUS_INFANTRY_SELF_REPAIR,Repair Kit: Self Repairing
 TEXT_TOOLTIP_BONUS_REFLECTIVE_ARMOR_30,Reflective Armor: 30% chance to deflect blaster fire
+TEXT_TOOLTIP_BUILDLIMIT_MAGNAGUARD,Build Limit: 5 | Lifetime: ∞
 TEXT_TOOLTIP_BUILDLIMIT_SUBJUGATOR,Build Limit: 3 | Lifetime: ∞
 TEXT_TOOLTIP_BX_COMMANDO,Highly advanced battle droids with enhanced armor, reflexes, and sophisticated combat and infiltration protocols. They are substantially faster and stronger than a B1 unit in performance but too expensive for line infantry. They are suitable for raiding, anti-infantry duties, and guarding VIP's.
 TEXT_TOOLTIP_BX_COMMANDO_COMPANY,Company: 24x BX Commando Droid
@@ -109,10 +140,29 @@ TEXT_TOOLTIP_C9979_SHIELD,Shields: 700 / [14/R] (Corvette)
 TEXT_TOOLTIP_C9979_SQUADRON,Fighters: 1 / 1 | Bombers: 1 / 2
 TEXT_TOOLTIP_C9979_WEAP1,2x Heavy Dual Laser Cannons: 2 / 5.0s / 4.6km
 TEXT_TOOLTIP_C9979_WEAP2,2x Medium Dual Rapid Laser Cannons: 6 / 5.0s / 3.6km
+TEXT_TOOLTIP_CAPITAL_CIS_1,B2 Super Battle Droid Squad: 5 / 15
+TEXT_TOOLTIP_CAPITAL_CIS_2,Elite Guard BX Commando Droid Squad: 2 / 6
+TEXT_TOOLTIP_CAPITAL_CIS_3,Dwarf Spider Droid Squad: 2 / 6
+TEXT_TOOLTIP_CAPITAL_CIS_4,Elite Magnaguard: 2 / 2
+TEXT_TOOLTIP_CAPITAL_CIS_5,Single Trooper Aerial Platform: 6 / 12
+TEXT_TOOLTIP_CAPITAL_CIS_6,OG-9 Homing Spider Droid: 1 / 2
+TEXT_TOOLTIP_CAPITAL_CIS_7,Armored Assault Tank-1: 2 / 4
+TEXT_TOOLTIP_CAPITAL_CIS_8,Multi-Troop Transport: 1 / 2
+TEXT_TOOLTIP_CAPITAL_CIS_9,Magna Octuptarra Droid: 1 / 2
+TEXT_TOOLTIP_CAPITAL_CISSC_HULL,Hull: 11570 (Capital)
+TEXT_TOOLTIP_CAPITAL_CISSC_HULL2,Hull: 13000 (Capital)
+TEXT_TOOLTIP_CAPITAL_CISSC_SHIELD,Shields: 20000 / [62.5/R] (Capital)
+TEXT_TOOLTIP_CAPITAL_CISSC_SHIELD2,Shields: 30000 / [62.5/R] (Capital)
+TEXT_TOOLTIP_CAPITAL_CISSC_SHIELD3,Shields: 33500 / [62.5/R] (Capital)
+TEXT_TOOLTIP_CB3,Built on the B2 Super Battle Droid chassis and massively upgraded, the C-B3 was designed to tank damage and deliver pinpoint strikes. Though it lost out to the B3 Ultra Battle Droid in the official selection for the next B-series model, Wat Tambor pushed production forward regardless. Its cortosis armor shrugs off heavy fire and can resist lightsabers for a time, making it especially effective against Jedi and special forces. Armed with high-precision laser systems, the C-B3 is built for elite engagements.
+TEXT_TOOLTIP_CB3_COMPANY,Squad: 2x C-B3 Cortosis Battle Droid
+TEXT_TOOLTIP_CB3_HEALTH,Health: 430 (Droid)
+TEXT_TOOLTIP_CB3_MOVE,Speed: 1.1
+TEXT_TOOLTIP_CB3_WEAP1,2x Dual High-Precision Laser: 2 / 2.5s / 310m
 TEXT_TOOLTIP_COMMAND_BANE_OF_HYPORI1,DH Omni Battleship, Bane of Hypori (Battle Refit)
 TEXT_TOOLTIP_COMMAND_BANE_OF_HYPORI2,DH Omni Battleship, Bane of Hypori (Carrier Refit)
 TEXT_TOOLTIP_COMMAND_CLAW_OF_BACTOID,DH Omni Battleship, Bane of Hypori
-TEXT_TOOLTIP_COMMAND_IG104_SHIP,Modified Porax-38 starfighter, Mascerade
+TEXT_TOOLTIP_COMMAND_IG104_SHIP,Modified Porax-38 Starfighter, Mascerade
 TEXT_TOOLTIP_COMMAND_K2B4,Modified Providence Carrier/Destroyer, Black Mamba
 TEXT_TOOLTIP_COYOTE_BOMBER,This wartime direct upgrade to an older Droid Bomber design spun off from the Vulture series. Employed by the Trade Federation in the subjugation of its corporate interests, and would fly under CIS colors when the Trade Federation pledged its military to the Separatists. It is similar to its peer the Hyena Bomber in role and power, swarming enemy capital ships to cripple or eliminate them while pushing through Republic fighter forces. Unusually for the size and design it is equipped with a weak shield, though it does make other performance sacrifices in comparison.
 TEXT_TOOLTIP_CRABDROID,The most common iteration of a product line intended to bolster Techno Union profits rather than win wars, this model of crab droid serves as a light anti-infantry unit and, less commonly, espionage, light and medium armor variants. It is well suited for close-up assaults against infantry groups and light vehicles.
@@ -170,6 +220,7 @@ TEXT_TOOLTIP_EG_BX_COMMANDO_WEAP4,1x Thermal Grenade: 1 / 15.0s / 200m
 TEXT_TOOLTIP_ESCORT_GRIEVOUS,2x Magnaguard
 TEXT_TOOLTIP_FORTRESS,Fortress Mode
 TEXT_TOOLTIP_FORTRESS_DESCRIPTION,Reduces speed and shield regeneration, but doubles fire rate.
+TEXT_TOOLTIP_H_FACTORY_CIS_1,Armored Assault Tank-1: 3 / 8
 TEXT_TOOLTIP_HAG,The Heavy Artillery Gun was a Trade Federation artillery piece first used during the invasion of Naboo. After the formation of the CIS it became the primary indirect fire artillery for the Confederacy.
 TEXT_TOOLTIP_HAG_COMPANY,Company: 1x HAG-M
 TEXT_TOOLTIP_HAG_HEALTH,Health: 100 (Medium Vehicle)
@@ -216,6 +267,8 @@ TEXT_TOOLTIP_J1_CANNON_HEALTH,Health: 50 (Heavy Vehicle)
 TEXT_TOOLTIP_J1_CANNON_MOVE,Speed: 0.75 | Turn: 2.0 
 TEXT_TOOLTIP_J1_CANNON_WEAP1,1x Heavy Mass Driver Cannon: 1 / 3.0s / 800m
 TEXT_TOOLTIP_K2B4,K2-B4 was a T-series military strategic analysis and tactics droid of feminine programming who served the Confederacy of Independent Systems during the time of the Clone Wars. Assigned to the Lola Sayu system, she was placed in command of a Separatist defense fleet. K2-B4 also served as the second-in-command of Phindian Commandant Osi Sobeck, who headed the Confederacy's Citadel prison on the planet Lola Sayu.
+TEXT_TOOLTIP_L_FACTORY_CIS_1,Single Trooper Aerial Platform: 3 / 6
+TEXT_TOOLTIP_L_FACTORY_CIS_3,OG-9 Homing Spider Droid: 3 / 6
 TEXT_TOOLTIP_LUCREHULK_DCS_SUPPORT,Droid Control Ship: 6% Combat bonus for all fighters
 TEXT_TOOLTIP_LUCREHULK_DCS_TENDER,Fighter Tender: 2 / 1.0s / 13.7km
 TEXT_TOOLTIP_LUCREHULKBATTLESHIP,Lucrehulk conversion that uses interior space normally reserved for complements/cargo for extra reactors, shield generators and bracing. Mounts a significant amount of turbolasers as a result, while maintaining a dangerous defensive laser grid. Compared to battle carriers it is much better at ship to ship combat but loses out in sheer fighter presence.
@@ -228,6 +281,14 @@ TEXT_TOOLTIP_LUCREHULKBATTLESHIP_WEAP2,28x Medium Turbolasers: 2 / 1.0s / 6.6km
 TEXT_TOOLTIP_LUCREHULKBATTLESHIP_WEAP3,40x Medium Quad Laser Cannons: 2 / 0.5s / 4.6km
 TEXT_TOOLTIP_LUCREHULKCONTROL,Wartime configuration Lucrehulk that retains the same large carrying capacity of fighters as the converted freighters. Control Ships provide a variety of support functions now that Central Control Computers are no longer in use, but the extra equipment reduces the vessel's shielding.
 TEXT_TOOLTIP_LUCREHULKCONTROL_SHIELD,Shields: 22000 / [55/R] (Capital)
+TEXT_TOOLTIP_MAF,The Haor Chall designed Mechanized Assault Flyer fulfils close air support and light transport duties. Significantly bulkier than the later HMP, with armament more comparable to the Republic LAAT-series.
+TEXT_TOOLTIP_MAF_COMPANY,Company: 1x MAF Gunship
+TEXT_TOOLTIP_MAF_HEALTH,Health: 350 (Heavy Speeder)
+TEXT_TOOLTIP_MAF_MOVE,Speed: 4.0 | Turn: 4.0
+TEXT_TOOLTIP_MAF_WEAP1,2x Heavy AV Blaster Cannon: 2 / 3.0s / 400m
+TEXT_TOOLTIP_MAF_WEAP2,1x Light AV Blaster Cannon: 4 / 2.0s / 400m
+TEXT_TOOLTIP_MAF_WEAP3,2x AI Beam Cannons: 20 / 5.0s / 240m
+TEXT_TOOLTIP_MAF_WEAP4,1x Proton Missile: 1 / 10.0s / 400m
 TEXT_TOOLTIP_MAGNAGUARD, A deadly droid model used to escort high-ranking VIP's in combat zones or serve as shock troopers in close-combat situations. Trained in assorted forms of melee combat on top of sophisticated programming, they are exceptionally deadly.
 TEXT_TOOLTIP_MAGNAGUARD_COMPANY,Company: 3x Magnaguard
 TEXT_TOOLTIP_MAGNAGUARD_HEALTH,Health: 200 (Hero)
@@ -269,6 +330,11 @@ TEXT_TOOLTIP_MUNIFICENT_HEAVY_CRUISER_WEAP3,4x Light Dual Turbolasers: 2 / 1.54s
 TEXT_TOOLTIP_MUNIFICENT_HEAVY_CRUISER_WEAP4,3x Heavy Dual Ion Cannons: 1 / 5.0s / 7.2km
 TEXT_TOOLTIP_MUNIFICENT_HEAVY_CRUISER_WEAP5,2x Light Dual Ion Cannons: 2 / 5.0s / 5.2km
 TEXT_TOOLTIP_MUNIFICENT_HEAVY_CRUISER_WEAP6,4x Light Dual Laser Cannons: 2 / 0.5s / 3.7km
+TEXT_TOOLTIP_OFFICE_CIS_1,B1 Security Battle Droid Squad: 3 / 6
+TEXT_TOOLTIP_OFFICE_CIS_2,Single Trooper Aerial Platform: 4 / 8
+TEXT_TOOLTIP_OFFICE_CIS_4,Crab Droid Squad: 1 / 3
+TEXT_TOOLTIP_OFFICE_CIS_5,Persuader Droid Enforcer: 1 / 2
+TEXT_TOOLTIP_OFFICE_CIS_6,OG-9 Homing Spider Droid: 1 / 2
 TEXT_TOOLTIP_OG9HOMINGSPIDERDROID,A Baktoid-developed droid meant to enforce Commerce Guild whims, its body is little more than a reactor with armor plating and legs. Both anti-infantry and anti-vehicle weapons make this walker a versatile combatant.
 TEXT_TOOLTIP_OG9HOMINGSPIDERDROID_COMPANY,Company: 4x OG-9 Homing Spider Droid
 TEXT_TOOLTIP_OG9HOMINGSPIDERDROID_HEALTH,Health: 150 (Light Vehicle)
@@ -280,7 +346,7 @@ TEXT_TOOLTIP_PAC_COMPANY,Company: 4x Platoon Attack Craft
 TEXT_TOOLTIP_PAC_HEALTH,Health: 150 (Light Vehicle)
 TEXT_TOOLTIP_PAC_MOVE,Speed: 2.0 | Turn: 1.0 
 TEXT_TOOLTIP_PAC_WEAP1,2x Light AI Blaster Cannons: 4 / 1.5s / 240m
-TEXT_TOOLTIP_PORAX,Porax-38 starfighter: Crafted on Utapau for the Confederacy, this distinctive fighter with its curved wings was the preferred craft of General Grievous’ MagnaGuards, feared for their ruthless skill in battle despite the Porax’s exposed cockpit.
+TEXT_TOOLTIP_PORAX,The Porax-38 Starfighter, crafted on Utapau for the Confederacy, this distinctive fighter with its curved wings was the preferred craft of General Grievous’ MagnaGuards, feared for their ruthless skill in battle despite the Porax’s exposed cockpit.
 TEXT_TOOLTIP_PROVIDENCE_DREADNOUGHT,An up-scaled version of a carrier/destroyer Providence used as a flagship in fleet actions or as a contender to larger Republic vessels. It retains a similar armament and role but is progressively more powerful than its smaller sibling.
 TEXT_TOOLTIP_PROVIDENCE_DREADNOUGHT_MOVE,Speed: 2.8 | Accel: 0.125 | Turn: 0.2
 TEXT_TOOLTIP_PROVIDENCE_DREADNOUGHT_SHIELD,Shields: 9200 / [90/R] (Capital)
@@ -313,7 +379,41 @@ TEXT_TOOLTIP_RECUSANT_DREADNOUGHT_WEAP3,1x Heavy Turbolaser: 2 / 2.5s / 7.5km
 TEXT_TOOLTIP_RECUSANT_DREADNOUGHT_WEAP4,2x Light Dual Turbolasers: 2 / 0.67s / 5.5km
 TEXT_TOOLTIP_RECUSANT_DREADNOUGHT_WEAP5,6x Medium Dual Laser Cannons: 2 / 0.5s / 4.5km
 TEXT_TOOLTIP_RECUSANT_DREADNOUGHT_WEAP6,2x Light Dual Laser Cannons: 2 / 0.42s / 4.0km
+TEXT_TOOLTIP_RESEARCH_CISSC,Research Facility: Allows Research.
 TEXT_TOOLTIP_SHIP_SWAP,Modify this Heroes Ship
+TEXT_TOOLTIP_SHIPYARD_CIS_1_1,Vulture Droid Squadron: 2 / ∞
+TEXT_TOOLTIP_SHIPYARD_CIS_1_2,Tri-Fighter Squadron: 1 / 2
+TEXT_TOOLTIP_SHIPYARD_CIS_1_3,Hyena Bomber Squadron: 2 / 4
+TEXT_TOOLTIP_SHIPYARD_CIS_1_4,Diamond Cruiser: 1 / 1
+TEXT_TOOLTIP_SHIPYARD_CIS_1_5,Hardcell Missile Ship: 2 / 0
+TEXT_TOOLTIP_SHIPYARD_CIS_1_6,Munifex Light Cruiser: 2 / 0
+TEXT_TOOLTIP_SHIPYARD_CIS_2_1,Vulture Droid Squadron: 2 / ∞
+TEXT_TOOLTIP_SHIPYARD_CIS_2_2,Tri-Fighter Squadron: 1 / 2
+TEXT_TOOLTIP_SHIPYARD_CIS_2_3,Hyena Bomber Squadron: 2 / 4
+TEXT_TOOLTIP_SHIPYARD_CIS_2_4,Diamond Cruiser: 1 / 2
+TEXT_TOOLTIP_SHIPYARD_CIS_2_5,Munifex Light Cruiser: 3 / 0
+TEXT_TOOLTIP_SHIPYARD_CIS_2_6,Hardcell Missile Ship: 1 / 0
+TEXT_TOOLTIP_SHIPYARD_CIS_2_7,Munificent Star Frigate: 1 / 0
+TEXT_TOOLTIP_SHIPYARD_CIS_3_1,Vulture Droid Squadron: 3 / ∞
+TEXT_TOOLTIP_SHIPYARD_CIS_3_2,Tri-Fighter Squadron: 1 / 2
+TEXT_TOOLTIP_SHIPYARD_CIS_3_3,Hyena Bomber Squadron: 3 / 6
+TEXT_TOOLTIP_SHIPYARD_CIS_3_4,Diamond Cruiser: 1 / 2
+TEXT_TOOLTIP_SHIPYARD_CIS_3_5,Hardcell Missile Ship: 1 / 0
+TEXT_TOOLTIP_SHIPYARD_CIS_3_6,Munificent Star Frigate: 2 / 0
+TEXT_TOOLTIP_SHIPYARD_CIS_3_7,Captor Heavy Munitions Carrier: 3 / 0
+TEXT_TOOLTIP_SHIPYARD_CIS_4_1,Vulture Droid Squadron: 3 / ∞
+TEXT_TOOLTIP_SHIPYARD_CIS_4_10,Lucrehulk Carrier: 1 / 0
+TEXT_TOOLTIP_SHIPYARD_CIS_4_2,Tri-Fighter Squadron: 2 / 4
+TEXT_TOOLTIP_SHIPYARD_CIS_4_3,Hyena Bomber Squadron: 4 / 8
+TEXT_TOOLTIP_SHIPYARD_CIS_4_4,Diamond Cruiser: 2 / 3
+TEXT_TOOLTIP_SHIPYARD_CIS_4_5,Hardcell Missile Ship: 3 / 0
+TEXT_TOOLTIP_SHIPYARD_CIS_4_6,Munifex Light Cruiser: 2 / 0
+TEXT_TOOLTIP_SHIPYARD_CIS_4_7,Munificent Star Frigate: 2 / 0
+TEXT_TOOLTIP_SHIPYARD_CIS_4_8,Captor Heavy Munitions Carrier: 2 / 0
+TEXT_TOOLTIP_SHIPYARD_CIS_4_9,Providence Carrier/Destroyer: 1 / 0
+TEXT_TOOLTIP_SHIPYARD_CISSC_10,Munificent Heavy Cruiser: 2 / 4
+TEXT_TOOLTIP_SHIPYARD_CISSC_11,Providence Dreadnought: 1 / 1
+TEXT_TOOLTIP_SHIPYARD_CISSC_4,Porax Fighter Squadron: 2 / 0
 TEXT_TOOLTIP_STAP,A fast scouting unit that serves as an alternate to speeder or swoop bikes. It was designed similarly to personal repulsorlift airhooks but with a thruster configuration that prevents use by organic riders. Stock models are relatively fragile and lightly armed with upgraded versions being rare. It is suited to light anti-infantry duties and reconnaissance.
 TEXT_TOOLTIP_STAP_COMPANY,Company: 8x Single Trooper Aerial Platform
 TEXT_TOOLTIP_STAP_HEALTH,Health: 25 (Speeder)
@@ -341,12 +441,14 @@ TEXT_TOOLTIP_SUPER_TANK_WEAP1,2x AV Blaster Cannons: 2 / 2.0s / 400m
 TEXT_TOOLTIP_SUPER_TANK_WEAP2,2x Light AI Blaster Cannons: 2 / 1.0s / 320m
 TEXT_TOOLTIP_SUPER_TANK_WEAP3,1x Heavy Proton Missile: 2 / 7.41s / 1440m
 TEXT_TOOLTIP_TRIFIGHTER,A compact, Colicoid designed droid fighter built around a reactor and advanced droid brain. It is fast, powerful, and agile but costly enough to not be deployed in as great numbers as vultures and their derivatives. It is very well suited to dogfighting and intercepting bombers.
+TEXT_TOOLTIP_UNITS_CISSC,Lucrehulk Goliath: Allows unit construction.
 TEXT_TOOLTIP_XANADU_BLOOD_HULL,Health: 250 (Fighter)
 TEXT_TOOLTIP_XANADU_BLOOD_SHIELD,Shields: 170 / [22/R] (Fighter)
 TEXT_TRIFIGHTER_SQUADRON,Tri-fighter Squadron
 TEXT_TRIFIGHTER_SQUADRON_HALF,Tri-fighter Squadron 1/2
 TEXT_TRIFIGHTER_SQUADRON2,Tri-fighter Squadron x2
 TEXT_UNIT_ADVANCED_ESTAP,Advanced E-STAP
+TEXT_UNIT_B3,B3 Ultra Battle Droid
 TEXT_UNIT_BX_COMMANDO,BX Commando Droid
 TEXT_UNIT_BX_COMMANDO_AT_LIGHT,BX Commando Droid Light AT
 TEXT_UNIT_BX_COMMANDO_GRENADIER,BX Commando Droid Grenadier
@@ -354,6 +456,7 @@ TEXT_UNIT_BX_COMMANDO_GUNNER,BX Commando Droid Gunner
 TEXT_UNIT_BX_COMMANDO_OFFICER,BX Commando Droid Officer
 TEXT_UNIT_BX_COMMANDO_SNIPER,BX Commando Droid Sniper
 TEXT_UNIT_C9979,C-9979 Carrier
+TEXT_UNIT_CB3,C-B3 Cortosis Battle Droid
 TEXT_UNIT_COYOTE_BOMBER,Coyote Advanced Droid Bomber
 TEXT_UNIT_CRAB_DROID,Crab Droid
 TEXT_UNIT_DEFOLIATOR,Defoliator Deployment Tank
@@ -373,6 +476,7 @@ TEXT_UNIT_J1_CANNON,J-1 Proton Cannon
 TEXT_UNIT_J1_CANNON_COMPANY,J-1 Proton Cannon Company
 TEXT_UNIT_LUCREHULKBATTLESHIP,Lucrehulk Battleship
 TEXT_UNIT_LUCREHULKCONTROL,Lucrehulk Control Carrier
+TEXT_UNIT_MAF,MAF Gunship
 TEXT_UNIT_MAGNAGUARD,Magnaguard
 TEXT_UNIT_MAGNATRI,Magna Octuptarra Droid
 TEXT_UNIT_MAGNATRI_COMPANY,Magna Octuptarra Droid Company
@@ -384,7 +488,7 @@ TEXT_UNIT_OG9_COMPANY,OG-9 Homing Spider Droid Company
 TEXT_UNIT_OG9HOMINGSPIDERDROID,OG-9 Homing Spider Droid
 TEXT_UNIT_PAC,Platoon Attack Craft
 TEXT_UNIT_PAC_COMPANY,Platoon Attack Craft Company
-TEXT_UNIT_PORAX,Rogue-class Porax-38 starfighter
+TEXT_UNIT_PORAX,Porax-38 Starfighter
 TEXT_UNIT_PROVIDENCE_DREADNOUGHT,Providence Dreadnought
 TEXT_UNIT_RECUSANT_DREADNOUGHT,Recusant Dreadnought
 TEXT_UNIT_STAP,Single Trooper Aerial Platform

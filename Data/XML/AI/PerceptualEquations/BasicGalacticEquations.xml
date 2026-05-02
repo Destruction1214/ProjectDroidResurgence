@@ -641,6 +641,11 @@
 									Parameter_Type = "Techno_Union_Capital",
 									Parameter_Type = "Yevetha_Capital",
 									Parameter_Type = "ZE_Capital_Alternate",
+									Parameter_Type = "CSA_Space_Capital",
+									Parameter_Type = "CSA_Space_Capital2",
+									Parameter_Type = "CSA_Space_Capital3",
+									Parameter_Type = "CSA_Space_Capital4",
+									Parameter_Type = "CSA_Space_Capital5",
 									Parameter_Only_Consider_Complete = 1.0
 									}
 	</Planet_Has_Capital_Building>
@@ -908,7 +913,12 @@
 									Parameter_Type = "Hapan_Shipyard_Galney",
 									Parameter_Type = "Hapan_Shipyard_Thane",
 									Parameter_Type = "Hapan_Shipyard_Corr",
-									Parameter_Type = "Hapan_Shipyard_Maluri"
+									Parameter_Type = "Hapan_Shipyard_Maluri",
+									Parameter_Type = "CSA_Space_Capital",
+									Parameter_Type = "CSA_Space_Capital2",
+									Parameter_Type = "CSA_Space_Capital3",
+									Parameter_Type = "CSA_Space_Capital4",
+									Parameter_Type = "CSA_Space_Capital5"
 									}
 		/
 		clamp(Variable_Self.PlanetsControlledUnnormalized, 1, 500)
@@ -1008,6 +1018,29 @@
 		Parameter_Only_Consider_Complete = 1.0}
 	</Planet_Has_Rancor_Base>
 
+	<!--ProDR-->
+	<Planet_Has_CIS_Space_Capital>
+		Variable_Target.StructureCount {Parameter_Type = "CIS_Space_Capital",
+										Parameter_Type = "CIS_Space_Capital2",
+										Parameter_Type = "CIS_Space_Capital3",
+										Parameter_Type = "CIS_Space_Capital4",
+										Parameter_Type = "CIS_Space_Capital5",
+		Parameter_Only_Consider_Complete = 1.0}
+	</Planet_Has_CIS_Space_Capital>
+
+	<Planet_Has_CIS_Space_Capital_T3>
+		Variable_Target.StructureCount {Parameter_Type = "CIS_Space_Capital",
+										Parameter_Type = "CIS_Space_Capital2",
+		Parameter_Only_Consider_Complete = 1.0}
+	</Planet_Has_CIS_Space_Capital_T3>
+
+	<Planet_Has_CIS_Space_Capital_T4>
+		Variable_Target.StructureCount {Parameter_Type = "CIS_Space_Capital3",
+										Parameter_Type = "CIS_Space_Capital4",
+										Parameter_Type = "CIS_Space_Capital5",
+		Parameter_Only_Consider_Complete = 1.0}
+	</Planet_Has_CIS_Space_Capital_T4>
+
 	<Planet_Has_Republic_Naval_Command_Centre>
 		Variable_Target.StructureCount {Parameter_Type = "Republic_Naval_Command_Centre",
 		Parameter_Only_Consider_Complete = 1.0}
@@ -1105,6 +1138,10 @@
 		4.0 * Function_Planet_Has_Republic_Naval_Command_Centre.Evaluate
 		+
 		4.0 * Function_Planet_Has_Shipyard_Hapan.Evaluate
+		+
+		3.0 * Function_Planet_Has_CIS_Space_Capital_T3.Evaluate
+		+
+		4.0 * Function_Planet_Has_CIS_Space_Capital_T4.Evaluate
 	</Shipyard_Level>
 
 	<Planet_Has_Shipyard>
@@ -1129,6 +1166,8 @@
 		Function_Planet_Has_Star_Forge_Relay.Evaluate
 		+
 		Function_Planet_Has_Shipyard_Hapan.Evaluate
+		+
+		Function_Planet_Has_CIS_Space_Capital.Evaluate
 	</Planet_Has_Shipyard>
 
 

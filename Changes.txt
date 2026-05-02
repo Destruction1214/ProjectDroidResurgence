@@ -21,7 +21,9 @@
     -faction color Proteus changed to FotR CIS Blue
 -PerceptuaLEquations:
     -das übliche (CIS Ground Structures)
-
+    -BasicGalacticEquations Planet_Has_CIS_Space_Capital
+-InfluenceRewards:
+	-ReqStructures Space edited
 
 
 
@@ -45,6 +47,18 @@
 -UnitSpawnerTables:
     -Hypori CIS rosteroverride added (2x)
 -CIS.lua in spawn-sets added
+-BuildShipyardPLan:
+    -Yards
+-AI_Plan_BuildCapital:
+    -Capitals
+-StructureCategoryLists:
+    -Yards
+-GameObjectLibrary:
+    -CIS Space Capital
+-roster-sets
+-standard-fighters
+-intervention-missions\missions\BuildStructuresGround/Space:
+	-changed file path for CIS proteus (+ new file)
 
 
 
@@ -53,3 +67,19 @@
 
 -i_proteus_submenu.alo (thx to Greene)
 -ported p_allied_cis.alo from FotR (inkl. Texture)
+-unit porting
+
+
+
+
+
+
+
+
+
+
+
+--NOTES:
+-spawn-sets:
+	-Starbase_Table
+	

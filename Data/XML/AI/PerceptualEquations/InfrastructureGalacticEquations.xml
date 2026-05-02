@@ -500,6 +500,8 @@
 			Function_Planet_Has_Rancor_Base.Evaluate
 			+
 			Function_Planet_Has_Space_Company.Evaluate
+			+
+			Function_Planet_Has_CIS_Space_Capital.Evaluate
 			)
 		)
 		*
@@ -656,6 +658,8 @@
 		(Variable_Target.EnemyForce.HasSpaceForce == 0)
 		*
 		(1 - Function_Planet_Has_Rancor_Base.Evaluate)
+		*
+		(1 - Function_Planet_Has_CIS_Space_Capital.Evaluate)
 	</Needs_Special_Shipyard>
 
 

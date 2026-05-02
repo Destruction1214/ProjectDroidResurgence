@@ -1,0 +1,3 @@
+return {
+	Flags = {FULLINHERIT = "CIS_SHIPYARD_LEVEL_THREE"}
+}

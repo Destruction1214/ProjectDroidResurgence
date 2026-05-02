@@ -1,0 +1,16 @@
+{
+  "diagnostics": {
+    "disable": [
+      "undefined-global",
+      "unresolved-require",
+      "unnecessary-if",
+      "undefined-doc-param",
+      "access-invisible",
+      "deprecated",
+      "global-in-non-module",
+      "need-check-nil",
+      "need-check-nil",
+      "undefined-field"
+    ]
+  }
+}

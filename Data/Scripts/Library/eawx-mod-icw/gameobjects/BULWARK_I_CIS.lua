@@ -1,8 +1,11 @@
 return {
 	Ship_Crew_Requirement = 240,
 	Fighters = {
-		["VULTURE_SQUADRON"] = {
-			DEFAULT = {Initial = 2, Reserve = 2}
+		["HEAVY_FIGHTER"] = {
+			DEFAULT = {Initial = 1, Reserve = 2}
+		},
+		["FIGHTER"] = {
+			DEFAULT = {Initial = 1, Reserve = 0},
 		}
 	},
 	Scripts = {"multilayer", "fighter-spawn"}

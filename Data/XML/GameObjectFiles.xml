@@ -95,6 +95,11 @@
 	<File>Government_EotH.xml</File>
 	<File>Options_TR.xml</File>
 
+	<File>Units\Units_ProDR.xml</File>
+	<File>Structures\Structures_ProDR.xml</File>
+	<File>Heroes\Heroes_ProDR.xml</File>
+	<File>Projectiles\Projectiles_ProDR.xml</File>
+
 	<File>Units\Probe_Droids.xml</File>
 	<File>Units\Units_Fighters.xml</File>
 	<File>Units\Units_Corvettes.xml</File>
@@ -186,11 +191,6 @@
 	<File>Heroes\New_Republic_Heroes_Jedi.xml</File>
 	
 	<File>Heroes\EotH_Heroes.xml</File>
-	
-	<File>Units\Units_ProDR.xml</File>
-	<File>Structures\Structures_ProDR.xml</File>
-	<File>Heroes\Heroes_ProDR.xml</File>
-	<File>Projectiles\Projectiles_ProDR.xml</File>
 
 	<File>Particles\TR_Particles_Abilities.xml</File>
 	<File>Projectiles\TR_Projectiles_SpecialAbility.xml</File>

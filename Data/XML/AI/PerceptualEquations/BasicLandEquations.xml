@@ -86,7 +86,7 @@
 										Parameter_Type = "HAG_CIS",
 										Parameter_Type = "Defoliator",
 										Parameter_Type = "Defoliator_CIS",
-										Parameter_Type = "CIS_Defoliator",
+										Parameter_Type = "CIS_Defoliator1",
 										Parameter_Type = "CA_Artillery",
 										Parameter_Type = "VPO_Artillery",
 										Parameter_Type = "SPMAG_Walker",
@@ -162,7 +162,12 @@
 							Parameter_Type = "Revolt_Rural_Capital",
 							Parameter_Type = "Revolt_Urban_Capital",
 							Parameter_Type = "Revolt_Mercenary_Capital",
-							Parameter_Type = "Revolt_Corporate_Capital"}
+							Parameter_Type = "Revolt_Corporate_Capital",
+							Parameter_Type = "CIS_Space_Capital",
+							Parameter_Type = "CIS_Space_Capital2",
+							Parameter_Type = "CIS_Space_Capital3",
+							Parameter_Type = "CIS_Space_Capital4",
+							Parameter_Type = "CIS_Space_Capital5"}
 	</Disable_VictoryPoint>
 
 	<Disable_Bombardment>
@@ -197,7 +202,12 @@
 							Parameter_Type = "Revolt_Rural_Capital",
 							Parameter_Type = "Revolt_Urban_Capital",
 							Parameter_Type = "Revolt_Mercenary_Capital",
-							Parameter_Type = "Revolt_Corporate_Capital"}
+							Parameter_Type = "Revolt_Corporate_Capital",
+							Parameter_Type = "CIS_Space_Capital",
+							Parameter_Type = "CIS_Space_Capital2",
+							Parameter_Type = "CIS_Space_Capital3",
+							Parameter_Type = "CIS_Space_Capital4",
+							Parameter_Type = "CIS_Space_Capital5"}
 	</Disable_Bombardment>
 
 	<Enemy_Has_Labour_Camp>
@@ -451,7 +461,12 @@
 											Parameter_Type = "Revolt_Rural_Capital",
 											Parameter_Type = "Revolt_Urban_Capital",
 											Parameter_Type = "Revolt_Mercenary_Capital",
-											Parameter_Type = "Revolt_Corporate_Capital"})
+											Parameter_Type = "Revolt_Corporate_Capital",
+											Parameter_Type = "CIS_Space_Capital",
+											Parameter_Type = "CIS_Space_Capital2",
+											Parameter_Type = "CIS_Space_Capital3",
+											Parameter_Type = "CIS_Space_Capital4",
+											Parameter_Type = "CIS_Space_Capital5"})
 		+
 		(Game.IsCampaignGame == 1)
 		*
@@ -564,7 +579,12 @@
 								Parameter_Type = "Revolt_Rural_Capital",
 								Parameter_Type = "Revolt_Urban_Capital",
 								Parameter_Type = "Revolt_Mercenary_Capital",
-								Parameter_Type = "Revolt_Corporate_Capital"}
+								Parameter_Type = "Revolt_Corporate_Capital",
+								Parameter_Type = "CIS_Space_Capital",
+								Parameter_Type = "CIS_Space_Capital2",
+								Parameter_Type = "CIS_Space_Capital3",
+								Parameter_Type = "CIS_Space_Capital4",
+								Parameter_Type = "CIS_Space_Capital5"}
 		) > 0
 	</Have_Structure_With_Garrison>
 
@@ -1273,7 +1293,12 @@
 								Parameter_Type = "Revolt_Urban_Capital",
 								Parameter_Type = "Revolt_Mercenary_Capital",
 								Parameter_Type = "Revolt_Corporate_Capital",
-								Parameter_Type = "CIS_Office"} == 0)
+								Parameter_Type = "CIS_Office",
+								Parameter_Type = "CIS_Space_Capital",
+								Parameter_Type = "CIS_Space_Capital2",
+								Parameter_Type = "CIS_Space_Capital3",
+								Parameter_Type = "CIS_Space_Capital4",
+								Parameter_Type = "CIS_Space_Capital5"} == 0)
 		*
 		(1 - Variable_Self.HasUnit {Parameter_Type = "Ground_Ion_Cannon"})
 		*

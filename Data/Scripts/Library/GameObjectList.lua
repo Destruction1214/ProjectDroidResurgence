@@ -862,13 +862,11 @@ return {
 ["ZSINJ_SHIPYARD_LEVEL_ONE"] = true,
 ["ZSINJ_SHIPYARD_LEVEL_THREE"] = true,
 ["ZSINJ_SHIPYARD_LEVEL_TWO"] = true,
-
--- custom heroes
+-- ProDR Heroes
 ["HYPORI_OMNI"] = true,
 ["HYPORI_OMNI2"] = true,
 ["K2B4_PROVIDENCE"] = true,
-
--- custom ships
+-- ProDR Ships
 ["DH_OMNI"] = true,
 ["HARDCELL"] = true,
 ["DIAMOND_FRIGATE"] = true,
@@ -888,4 +886,14 @@ return {
 ["LUCREHULK_BATTLESHIP_CIS"] = true,
 ["LUCREHULK_CARRIER_CONTROL_CIS"] = true,
 ["SUBJUGATOR"] = true,
+-- ProDR Structures
+["CIS_SHIPYARD_LEVEL_FOUR"] = true,
+["CIS_SHIPYARD_LEVEL_ONE"] = true,
+["CIS_SHIPYARD_LEVEL_THREE"] = true,
+["CIS_SHIPYARD_LEVEL_TWO"] = true,
+["CIS_SPACE_CAPITAL"] = true,
+["CIS_SPACE_CAPITAL2"] = true,
+["CIS_SPACE_CAPITAL3"] = true,
+["CIS_SPACE_CAPITAL4"] = true,
+["CIS_SPACE_CAPITAL5"] = true,
 }

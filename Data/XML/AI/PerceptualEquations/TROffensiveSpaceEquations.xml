@@ -359,7 +359,12 @@
 								Parameter_Type = "Hutt_Shipyard_Level_Four",
 								Parameter_Type = "Yevetha_Shipyard_Level_Four",
 								Parameter_Type = "Imperial_Proteus_Shipyard_Level_Four",
-								Parameter_Type = "CIS_Shipyard_Level_Four"}
+								Parameter_Type = "CIS_Shipyard_Level_Four",
+								Parameter_Type = "CIS_Space_Capital",
+								Parameter_Type = "CIS_Space_Capital2",
+								Parameter_Type = "CIS_Space_Capital3",
+								Parameter_Type = "CIS_Space_Capital4",
+								Parameter_Type = "CIS_Space_Capital5"}
 		+
 		5000
 		*

@@ -1,13 +1,13 @@
 return {
 	Ship_Crew_Requirement = 115,
 	Fighters = {
-		["VULTURE_SQUADRON"] = {
+		["LIGHT_FIGHTER"] = {
 			DEFAULT = {Initial = 1, Reserve = 3}
 		},
-		["TRIFIGHTER_SQUADRON"] = {
+		["HEAVY_FIGHTER"] = {
 			DEFAULT = {Initial = 1, Reserve = 2}
 		},
-		["ADVANCED_ESTAP_SQUADRON_DOUBLE"] = {
+		["BOMBER_DOUBLE"] = {
 			DEFAULT = {Initial = 1, Reserve = 2}
 		}
 	},
