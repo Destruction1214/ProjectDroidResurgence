@@ -380,6 +380,9 @@ TEXT_TOOLTIP_RECUSANT_DREADNOUGHT_WEAP4,2x Light Dual Turbolasers: 2 / 0.67s / 5
 TEXT_TOOLTIP_RECUSANT_DREADNOUGHT_WEAP5,6x Medium Dual Laser Cannons: 2 / 0.5s / 4.5km
 TEXT_TOOLTIP_RECUSANT_DREADNOUGHT_WEAP6,2x Light Dual Laser Cannons: 2 / 0.42s / 4.0km
 TEXT_TOOLTIP_RESEARCH_CISSC,Research Facility: Allows Research.
+TEXT_TOOLTIP_RESEARCH_CISSC_PRODUCTIONBOOST,Prodcution speed and cost will be greatly reduced, due to optimized management of ressources.
+TEXT_TOOLTIP_S_B2_RESEARCH,Newer models of the B2 will be constructed with portable shield generators for increased durability.
+TEXT_TOOLTIP_S_VULTURES_RESEARCH,Vulture Droids will be refitted with light weight shield generators, increasing survivability without performance loss.
 TEXT_TOOLTIP_SHIP_SWAP,Modify this Heroes Ship
 TEXT_TOOLTIP_SHIPYARD_CIS_1_1,Vulture Droid Squadron: 2 / ∞
 TEXT_TOOLTIP_SHIPYARD_CIS_1_2,Tri-Fighter Squadron: 1 / 2
@@ -491,6 +494,9 @@ TEXT_UNIT_PAC_COMPANY,Platoon Attack Craft Company
 TEXT_UNIT_PORAX,Porax-38 Starfighter
 TEXT_UNIT_PROVIDENCE_DREADNOUGHT,Providence Dreadnought
 TEXT_UNIT_RECUSANT_DREADNOUGHT,Recusant Dreadnought
+TEXT_UNIT_RESEARCH_CISSC_PRODUCTIONBOOST,Optimize Production Process
+TEXT_UNIT_S_B2_RESEARCH,Shielded B2 Droids
+TEXT_UNIT_S_VULTURES_RESEARCH,Shielded Vulture Droid
 TEXT_UNIT_STAP,Single Trooper Aerial Platform
 TEXT_UNIT_STAP_COMPANY,STAP Company
 TEXT_UNIT_SUBJUGATOR,Subjugator Heavy Cruiser
@@ -500,3 +506,5 @@ TEXT_UNIT_VULTURE_DROID,Vulture Droid Mark 1
 TEXT_VULTURE_SQUADRON,Vulture Droid-I Squadron
 TEXT_VULTURE_SQUADRON_HALF,Vulture Droid-I Squadron 1/2
 TEXT_VULTURE_SQUADRON2,Vulture Droid-I Squadron x2
+TEXT_TOOLTIP_BONUS_PRICE_TIME_CISSC,Price and time reduction for all units, ships and structures:
+TEXT_TOOLTIP_BONUS_DISCOUNT_CISSC,Price: -35% | Time: -35%

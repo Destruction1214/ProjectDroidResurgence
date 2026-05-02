@@ -59,6 +59,7 @@
 -standard-fighters
 -intervention-missions\missions\BuildStructuresGround/Space:
 	-changed file path for CIS proteus (+ new file)
+-UnitSwitcherLibrary
 
 
 
