@@ -67,6 +67,9 @@ return {
 		local proteus = GlobalValue.Get("PROTEUS_GROUP_NAME")
 		if proteus == "CIS_REMNANTS" then
 			fighter = "VULTURE_SQUADRON"
+			if Get_Fighter_Research("SVultures") then
+				fighter = "SHIELDED_VULTURE_SQUADRON"
+			end
 		end
 		--/
 		

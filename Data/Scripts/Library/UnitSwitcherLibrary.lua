@@ -104,9 +104,9 @@ return {
 	["DUMMY_RECRUIT_GROUP_PRAJI"] = {nil,{"Praji_Secutor"}},
 	["DUMMY_RECRUIT_GROUP_JANARA"] = {nil,{"Brandei_Judicator"}},
 	["DUMMY_RECRUIT_GROUP_THORN"] = {nil,{"Thorn_Assertor"}},
-	
-		-- Custom
+	-- ProDR
 	["HYPORI_SWAP1"] = {"Hypori_Omni","Hypori_Team2"},
 	["HYPORI_SWAP2"] = {"Hypori_Omni2","Hypori_Team"},
+	["CIS_SPACE_CAPITAL_DUMMY"] = {"CIS_Space_Capital3","CIS_Space_Capital4"},
 	
 }
