@@ -5,10 +5,19 @@ TEXT_BX_COMMANDO_COMPANY,BX Commando Droid Platoon
 TEXT_BX_COMMANDO_SNIPER_SQUAD,BX Commando Droid Sniper Squad
 TEXT_BX_COMMANDO_SQUAD,BX Commando Droid Squad
 TEXT_BX_COMMANDO_WEAPONS_SQUAD,BX Commando Droid Weapons Squad
+TEXT_CHAMELEON_DROID,Chameleon Droid
+TEXT_CHAMELEON_DROID_COMPANY,Chameleon Droid Company
+TEXT_CHAMELEON_DROID_SQUAD,Chameleon Droid Squad
+TEXT_COMPANY_BIG_BAKTOID,Baktoid Armor Workshop
+TEXT_COMPANY_BIG_BAKTOID_DESCRIPTION,All Baktoid Industries, Armor Workshop, Combat Automata, and Fleet Ordnance products: B1 Battle Droid, B2 Battle Droid, B3 Ultra Battle Droid, C-B3 Cortosis Droid, BX Commando Droid, Destroyer Droid-II, Dwarf Spider Droid, STAP, HAG-M, Defoliator Deployment Tank, OG-9 Homing Spider Droid, J-1 Proton Cannon, HAML, HMP Gunship, HMP-II Gunship, MTT, MTM, and Super Tank.
 TEXT_COMPANY_CIS_CAPITAL,Heart of the Confederacy
 TEXT_COMPANY_CIS_SPACE_CAPITAL,Lucrehulk Goliath
 TEXT_COMPANY_CISSC_DESCRIPTION,Lucrehulk Goliath serves as a bastion of resistance for the Separatist Remnants. It provides a discount on all military hardware and can be upgraded.
 TEXT_COMPANY_CORPORATEHQ,Corporate Headquarters
+TEXT_COMPANY_GARRISON_BIG_BAKTOID1,OOM Security Droid Squad: 4 / 10
+TEXT_COMPANY_GARRISON_BIG_BAKTOID2,AAT: 2 / 2
+TEXT_COMPANY_GARRISON_BIG_BAKTOID3,B3 Ultra Battle Droid Squad: 1 / 1
+TEXT_COMPANY_SMALL_BAKTOID,Baktoid Armor Workshop Subsidiary
 TEXT_CONQUEST_CIS_REMNANTS, --intro speech--
 TEXT_COYOTE_BOMBER_SQUADRON,Coyote Advanced Droid Bomber Squadron
 TEXT_COYOTE_BOMBER_SQUADRON_HALF,Coyote Advanced Droid Bomber Squadron 1/2
@@ -17,21 +26,69 @@ TEXT_CRAB_DROID_COMPANY,Crab Droid Company
 TEXT_CRAB_DROID_SQUAD,Crab Droid Squad
 TEXT_DISPLAY_CIS_SPACE_CAPITAL,Construction Station: Lucrehulk Goliath
 TEXT_EG_BX_COMMANDO_SQUAD,Elite Guard BX Commando Droid Squad
+TEXT_ENCYCLOPEDIA_CLASS_LICENSE,License
 TEXT_EVENT_WARLORD_CHOICE_CIS_REMNANTS,Separatist Remnants
 TEXT_GROUND_CIS_ADVANCED_VEHICLE_FACTORY,Droid Heavy Vehicle Factory
 TEXT_GROUND_CIS_BARRACKS,Droid Infantry Factory
 TEXT_GROUND_CIS_HEAVY_VEHICLE_FACTORY,Piloted Vehicle Factory
 TEXT_GROUND_CIS_LIGHT_VEHICLE_FACTORY,Droid Vehicle Factory
 TEXT_GROUND_SECURITYDROID_FACTORY,Security Droid Factory
+TEXT_GROUP_DESCRIPTION_AGAMAR,Recruits: General Kalani and Unlocks HMP-II Gunship
+TEXT_GROUP_DESCRIPTION_KOBOH,Recruits: The Massiff, Beetu Deetu and E3-VE3
+TEXT_GROUP_DESCRIPTION_SERENNO,Recruits: IG 104, Tarn and 4x Elite Magnaguard
+TEXT_GROUP_DESCRIPTION_SULLUST,Recruits: Aut-0 and Unlocks Providence Carrier/Destroyer II
+TEXT_GROUP_NAME_AGAMAR,Agamar Group
+TEXT_GROUP_NAME_KOBOH,Koboh Group
+TEXT_GROUP_NAME_SERENNO,Serenno Group
+TEXT_GROUP_NAME_SULLUST,Sullust Group
+TEXT_HERO_AUTO,Aut-O
+TEXT_HERO_B2D2,Beetu Deetu
+TEXT_HERO_E3VE3,E3-VE3
 TEXT_HERO_HYPORI,Hypori
 TEXT_HERO_K2B4,K2-B4
+TEXT_HERO_KALANI,Kalani
+TEXT_HERO_MASSIFF,The Massiff
+TEXT_HERO_TARN,Tarn
 TEXT_HYENA_SQUADRON,Hyena Bomber Squadron
 TEXT_HYENA_SQUADRON_HALF,Hyena Bomber Squadron 1/2
 TEXT_HYENA_SQUADRON2,Hyena Bomber Squadron x2
+TEXT_LICENSE_ADD,Purchase this license to add the following units to the Baktoid Armor Workshop:
+TEXT_LICENSE_CB3,Cortosis Battle Droid License
+TEXT_LICENSE_CHAMELEON,Chameleon Droid License
+TEXT_LICENSE_DEFOLIATOR,Defoliator License
+TEXT_LICENSE_DESTROYER_II,Destroyer Droid II variant License
+TEXT_LICENSE_LIGHT_B1,Light B1 Battle Droid Company License
+TEXT_LICENSE_LUCREHULK,Lucrehulk variant License
+TEXT_LICENSE_MISSILE_OCTUPTARRA,Octuptarra Missile Tri-droid License
+TEXT_LICENSE_MTM,Multi-Troop Medic License
+TEXT_LICENSE_PROVIDENCE_DREADNOUGHT,Providence Dreadnought License
+TEXT_LICENSE_RECUSANT_DREADNOUGHT,Recusant Dreadnought License
+TEXT_LICENSE_SCORPENEK,Scorpenek variant License
+TEXT_LICENSE_SPY_BX,BX Spy Commando License
+TEXT_LICENSE_SUBJUGATOR,Subjugator Heavy Cruiser License
+TEXT_LICENSE_SUPER_TANK,Super Tank License
+TEXT_MAGNAGUARD_REQUIREMENT,Magnaguard Units: Allows unique construction
+TEXT_OBJECT_STAR_SYSTEM_BRACCA,Bracca
+TEXT_OBJECT_STAR_SYSTEM_CASTELL,Castell
+TEXT_OBJECT_STAR_SYSTEM_KOBOH,Koboh
+TEXT_OBJECT_STAR_SYSTEM_LOLA_SAYU,Lola Sayu
+TEXT_PLANET_INFO_BRACCA_FAUNA,Bisnu |  Mygora | Scrap rat | Other
+TEXT_PLANET_INFO_BRACCA_HISTORY,Bracca was once a thriving industrial world known for its massive shipbreaking yards and strategic importance during the Clone Wars. After the rise of the Galactic Empire, Bracca became one of the galaxy’s largest scrapyards, where decommissioned Republic cruisers and confederate warships were dismantled piece by piece. Endless rainstorms and oceans of wreckage covered the planet, creating a harsh landscape filled with rusting metal and forgotten technology. Thousands of workers lived under strict Imperial control, salvaging valuable materials from the remains of a war-torn era.
+TEXT_PLANET_INFO_BRACCA_POPULATION,Immigrated Various
+TEXT_PLANET_INFO_CASTELL_FAUNA,None
+TEXT_PLANET_INFO_CASTELL_HISTORY,Castell was a planet located in the Castell system of the Colonies, situated along the Perlemian Trade Route. The Commerce Guild had interests on Castell and their Presidente Shu Mai hailed from the planet. Castell sided with the Confederacy of Independent Systems during the Clone Wars during which it was defended by Diamond-class cruisers, Recusant-class Commerce Guild destroyers, as well as Commerce Guild Bombers and Commerce Guild corvettes.
+TEXT_PLANET_INFO_CASTELL_POPULATION,Native: Gossam\n10 - 100 Million
+TEXT_PLANET_INFO_KOBOH_FAUNA,Bilemaw | Nekko | Bogling | Other
+TEXT_PLANET_INFO_KOBOH_HISTORY,The remote frontier planet Koboh became a graveyard of the crashed Core of the Lucrehulk battleship Primacy left behind after the Clone Wars. Over decades, the massive wreck rusted into the landscape, its dormant battle droids buried beneath vines, dust, and stone. Scavengers and settlers slowly built lives around the wreckage, salvaging technology while dangerous wildlife reclaimed the valleys and cliffs nearby. Deep inside the ruined ship, forgotten systems occasionally flickered back to life.
+TEXT_PLANET_INFO_KOBOH_POPULATION,Immigrated Various
+TEXT_PLANET_INFO_LOLA_SAYU_FAUNA,None
+TEXT_PLANET_INFO_LOLA_SAYU_HISTORY,Before its discovery by the Galactic Republic the Outer Rim world known as Lola Sayu suffered a cataclysmic event. Nearly the entire southern hemisphere of the planet had disappeared, ejected into orbit and forming a gravitational belt of planetary debris, leaving the planet's molten core destabilised and exposed. Despite its broken state, Lola Sayu's northern hemisphere retained a precarious ability to sustain terrestrial life. In 522 BBY the Republic worked alongside its allies, the Jedi Order, to establish an isolated, maximum-security prison that would eventually become known as the infamous Citadel. Designed to contain Jedi who had either gone rogue or fallen to the dark side of the Force, the spire-like facility was constructed on the north-western side of the planet, powered by the geothermal energies from the lava lakes that surrounded it.
+TEXT_PLANET_INFO_LOLA_SAYU_POPULATION,Immigrated: Human | Other
 TEXT_PORAX_SQUADRON,Porax-38 Starfighter Squadron
 TEXT_PORAX_SQUADRON_HALF,Porax-38 Starfighter Squadron 1/2
 TEXT_PORAX_SQUADRON2,Porax-38 Starfighter Squadron x2
 TEXT_PROTEUS_DESCRIPTION_CIS_REMNANTS, --desc in select menu--
+TEXT_REPAIR_DROID_SQUAD,Repair Droid Squad
 TEXT_STATBLOCK_ADVANCED_ESTAP_BASE,Health: 11 | Shields: 4
 TEXT_STATBLOCK_ADVANCED_ESTAP_MOVE,Speed: 5.57 | Maneuverability: 4.65
 TEXT_STATBLOCK_ADVANCED_ESTAP_SQUADRON,Squadron: 12x Advanced E-STAP
@@ -63,6 +120,7 @@ TEXT_STATBLOCK_PORAX_BASE,Health: 20 | Shield: 15
 TEXT_STATBLOCK_PORAX_SQUADRON,Squadron: 24x Porax-38 Starfighter
 TEXT_STATBLOCK_PORAX_SQUADRON_DOUBLE,Squadron: 48x Porax-38 Starfighter
 TEXT_STATBLOCK_PORAX_SQUADRON_HALF,Squadron: 12x Porax-38 Starfighter
+TEXT_STATBLOCK_SHIELD_VULTURE_BASE,Health: 4 | Shields: 2
 TEXT_STATBLOCK_TRIFIGHTER_BASE,Health: 10 | Unshielded
 TEXT_STATBLOCK_TRIFIGHTER_MOVE,Speed: 7.4 | Maneuverability: 5.65
 TEXT_STATBLOCK_TRIFIGHTER_SQUADRON,Squadron: 12x Droid Tri-Fighter
@@ -81,7 +139,12 @@ TEXT_STATBLOCK_VULTURE_WEAP1,1x Fighter Laser Cannon: 4 / 3.0s / 1.0km
 TEXT_STATBLOCK_VULTURE_WEAP2,1x Fighter Concussion Missile: 1 / 75.0s / 1.8km
 TEXT_STATBLOCK_XANADU_WEAP1,1x Fighter Laser Cannon: 4 / 1.3s / 2.0km
 TEXT_TOOLTIP_A_FACTORY_CIS_1,Multi-Troop Transport: 1 / 1
+TEXT_TOOLTIP_AAT_COMPANY,Company: 3x AAT-1
 TEXT_TOOLTIP_ADVANCED_ESTAP,The most refined form of an outdated Trade Federation starbomber. In contrast to other droid bomber craft, the E-STAP Series is very well armed even compared to piloted bombers of the time, but presents a much slower target in comparison. Incorporates additional secondary weapons and heftier protection when compared with previous models.
+TEXT_TOOLTIP_AUTO, A Super Tactical Droid with a penchant for using a combination of large battleships and gunboat escorts. It was programmed specifically to defend important assets such as codebreakers, supercomputers and fleet bases.
+TEXT_TOOLTIP_B2_BATTLEDROID_SHIELD,Shields: 6 / [1/R] (Infantry)
+TEXT_TOOLTIP_B2D2,A capable Commander in the Separatist Army, B2-D2 "Beetu Deetu" was sent to Koboh near the end of the war. Following the shutdown command, he was reactivated and reprogrammed by the Bedlam Raiders.
+TEXT_TOOLTIP_B2D2_HEALTH,Health: 170 (Hero)
 TEXT_TOOLTIP_B3,A towering upgrade of the B2 Super Battle Droid, the B3 dwarfs most humanoids and brings overwhelming firepower to the battlefield. It's a serious threat to infantry and still dangerous to Jedi - though not as specialized as the C-B3 Cortosis Droid. Armed with wrist blasters, flamethrowers, rockets, and even some anti-air support, it's built to dominate ground combat.
 TEXT_TOOLTIP_B3_COMPANY,Squad: 1x B3 Ultra Battle Droid
 TEXT_TOOLTIP_B3_HEALTH,Health: 290 (Droid)
@@ -97,11 +160,15 @@ TEXT_TOOLTIP_B3_WEAP5,2x Light combat Cannon: 1 / 2.25s / 250m
 TEXT_TOOLTIP_BARRACKS_CIS_2,B1 Security Battle Droid Squad: 2 / ∞
 TEXT_TOOLTIP_BARRACKS_CIS_3,B2 Super Battle Droid Squad: 1 / ∞
 TEXT_TOOLTIP_BARRACKS_CIS_7,Q-Series Destroyer Droid: 5 / 10
+TEXT_TOOLTIP_BATTLEDROID_LIGHT,A variant of the B1 droid, identical in every way - except this unit takes up no space on the battlefield!
+TEXT_TOOLTIP_BONUS_DISCOUNT_CISSC,Price: -35% | Time: -35%
 TEXT_TOOLTIP_BONUS_DUEL_TRAINING_20,Duelist: 20% chance to redirect infantry blaster fire
 TEXT_TOOLTIP_BONUS_DUEL_TRAINING_30,Duelist: 30% chance to redirect infantry blaster fire
 TEXT_TOOLTIP_BONUS_INFANTRY_SELF_REPAIR,Repair Kit: Self Repairing
+TEXT_TOOLTIP_BONUS_PRICE_TIME_CISSC,Price and time reduction for all units, ships and structures:
 TEXT_TOOLTIP_BONUS_REFLECTIVE_ARMOR_30,Reflective Armor: 30% chance to deflect blaster fire
 TEXT_TOOLTIP_BUILDLIMIT_MAGNAGUARD,Build Limit: 5 | Lifetime: ∞
+TEXT_TOOLTIP_BUILDLIMIT_SMALL_BAKTOID,Build Limit: 5
 TEXT_TOOLTIP_BUILDLIMIT_SUBJUGATOR,Build Limit: 3 | Lifetime: ∞
 TEXT_TOOLTIP_BX_COMMANDO,Highly advanced battle droids with enhanced armor, reflexes, and sophisticated combat and infiltration protocols. They are substantially faster and stronger than a B1 unit in performance but too expensive for line infantry. They are suitable for raiding, anti-infantry duties, and guarding VIP's.
 TEXT_TOOLTIP_BX_COMMANDO_COMPANY,Company: 24x BX Commando Droid
@@ -159,11 +226,17 @@ TEXT_TOOLTIP_CB3_COMPANY,Squad: 2x C-B3 Cortosis Battle Droid
 TEXT_TOOLTIP_CB3_HEALTH,Health: 430 (Droid)
 TEXT_TOOLTIP_CB3_MOVE,Speed: 1.1
 TEXT_TOOLTIP_CB3_WEAP1,2x Dual High-Precision Laser: 2 / 2.5s / 310m
+TEXT_TOOLTIP_CHAMELEON_DROID,A highly adaptable infiltration droid equipped with advanced holo-camouflage plating. Designed for silent surveillance and rapid intel extraction, it can blend seamlessly into any environment. Though lightly armed, its agility and cloaking make it a dangerous predator when unseen.
+TEXT_TOOLTIP_CHAMELEON_DROID_COMPANY,Company: 16x Chameleon Droid
+TEXT_TOOLTIP_CHAMELEON_DROID_SQUAD,Squad: 4x Chameleon Droid
+TEXT_TOOLTIP_CIS_MARKET,This building grants access to the Baktoid Armor Workshop.
+TEXT_TOOLTIP_COMMAND_AUTO,Providence Carrier/Destroyer II, 104-B313
 TEXT_TOOLTIP_COMMAND_BANE_OF_HYPORI1,DH Omni Battleship, Bane of Hypori (Battle Refit)
 TEXT_TOOLTIP_COMMAND_BANE_OF_HYPORI2,DH Omni Battleship, Bane of Hypori (Carrier Refit)
 TEXT_TOOLTIP_COMMAND_CLAW_OF_BACTOID,DH Omni Battleship, Bane of Hypori
 TEXT_TOOLTIP_COMMAND_IG104_SHIP,Modified Porax-38 Starfighter, Mascerade
 TEXT_TOOLTIP_COMMAND_K2B4,Modified Providence Carrier/Destroyer, Black Mamba
+TEXT_TOOLTIP_COMMAND_TARN,Heavy Munificent Cruiser, Scalar
 TEXT_TOOLTIP_COYOTE_BOMBER,This wartime direct upgrade to an older Droid Bomber design spun off from the Vulture series. Employed by the Trade Federation in the subjugation of its corporate interests, and would fly under CIS colors when the Trade Federation pledged its military to the Separatists. It is similar to its peer the Hyena Bomber in role and power, swarming enemy capital ships to cripple or eliminate them while pushing through Republic fighter forces. Unusually for the size and design it is equipped with a weak shield, though it does make other performance sacrifices in comparison.
 TEXT_TOOLTIP_CRABDROID,The most common iteration of a product line intended to bolster Techno Union profits rather than win wars, this model of crab droid serves as a light anti-infantry unit and, less commonly, espionage, light and medium armor variants. It is well suited for close-up assaults against infantry groups and light vehicles.
 TEXT_TOOLTIP_CRABDROID_COMPANY,Company: 16x Crab Droid
@@ -203,6 +276,16 @@ TEXT_TOOLTIP_DIAMOND_PD,Point-Defense: 1 / 0.21s / 1.5km
 TEXT_TOOLTIP_DIAMOND_SHIELD,Shields: 900 / [18/R] (Frigate)
 TEXT_TOOLTIP_DIAMOND_WEAP1,1x Medium Dual Laser Cannon: 2 / 1.67s / 4.1km
 TEXT_TOOLTIP_DIAMOND_WEAP2,4x Medium Rapid Laser Cannons: 6 / 1.67s / 3.6km
+TEXT_TOOLTIP_DOCTOR,Doctor was a Tactical Droid destroyed at the Battle of Ukio in 21 BBY. On Passel Argente's orders, his remains were recovered and brought to the nearby planet Hypori, where he was rebuilt and tasked with overseeing its defenses, until the Captain of the Magnaguards arrived. Always research-minded, Doctor's focus shifted on Hypori from genetics to repairing and optimizing Separatist technology, driven by the planet's lack of organic life.
+TEXT_TOOLTIP_DROCH,Inspired by the Toothspike Raptors of Colla IV, the Droch was a boarding vessel in the service of the Confederacy of Independent Systems. Its four spikes served a dual purpose. Primarily they would allow the pod to breach the outer hull of target vessels creating an entrance for the boarding party aboard. Secondarily the spikes could be opened to grab onto objects and then closed to crush the grappled object in their vices.
+TEXT_TOOLTIP_DROCH_HULL,Hull: 80 (Heavy Fighter)
+TEXT_TOOLTIP_DROCH_MOVE,Speed: 2.25 | Maneuverability: 5.0
+TEXT_TOOLTIP_DROCH_SHIELD,Shields: 90 / [1.6/R] (Heavy Fighter)
+TEXT_TOOLTIP_DROCH_WEAP1,1x Heavy Fighter Laser Cannon: 4 / 2.0s / 1.0km
+TEXT_TOOLTIP_E3VE3,E3-VE3 was a custom-modified Droideka sent to the planet of Koboh near the end of the Clone Wars. The droid was modified to have enhanced offensive capabilities and heightened belligerence algorithms. E3-VE3 was reprogrammed multiple times after being reactivated. His first reprogramming was at the hand of the Bedlam Raiders, the second by Koboh Locals seeking protection.
+TEXT_TOOLTIP_E3VE3_HEALTH,Health: 200 (Hero)
+TEXT_TOOLTIP_E3VE3_MOVE,Speed: 1.5
+TEXT_TOOLTIP_E3VE3_SHIELD,Shields: 85 / [15/R] (Infantry)
 TEXT_TOOLTIP_EG_BX_COMMANDO,Polished to a gleam and emblazoned with Separatist and Serenno-nobility inspired livery, this version of the BX Commando has been further upgraded and given better equipment. These variants are used as an honour guard, in the protection of high-ranking Separatist and corporate assets.
 TEXT_TOOLTIP_EG_BX_COMMANDO_HEALTH,Health: 36 (Droid)
 TEXT_TOOLTIP_EG_BX_COMMANDO_MOVE,Speed: 1.4 
@@ -217,7 +300,15 @@ TEXT_TOOLTIP_EG_BX_COMMANDO_WEAP1,1x E-5C Heavy Blaster Rifle: 5 / 1.0s / 240m
 TEXT_TOOLTIP_EG_BX_COMMANDO_WEAP2,1x Wrist Light Proton Grenade: 1 / 15.0s / 200m
 TEXT_TOOLTIP_EG_BX_COMMANDO_WEAP3,1x Concussion Grenade: 1 / 15.0s / 200m
 TEXT_TOOLTIP_EG_BX_COMMANDO_WEAP4,1x Thermal Grenade: 1 / 15.0s / 200m
+TEXT_TOOLTIP_ELITE_MAGNAGUARD,Elite Magnaguards are enhanced variants of the standard IG-series Magnaguards, outfitted with superior combat processors and reinforced armor. Identified by their glowing yellow photoreceptors and yellow-charged electrostaffs, these droids are engineered to engage the most dangerous adversaries. Designed to counter Jedi and elite foes alike, they fight with unmatched precision, endurance, and unwavering loyalty.
+TEXT_TOOLTIP_ELITE_MAGNAGUARD_COMPANY,Company: 3x Elite Magnaguard
+TEXT_TOOLTIP_ELITE_MAGNAGUARD_HEALTH,Health: 220 (Droid)
+TEXT_TOOLTIP_ELITE_MAGNAGUARD_MOVE,Speed: 1.3
+TEXT_TOOLTIP_ESCORT_B2D2_1,4x B2 Super Battle Droid Squad
+TEXT_TOOLTIP_ESCORT_B2D2_2,4x B1 Battle Droid Squad
+TEXT_TOOLTIP_ESCORT_E3VE3,4x B1 Battle Droid Squad
 TEXT_TOOLTIP_ESCORT_GRIEVOUS,2x Magnaguard
+TEXT_TOOLTIP_ESCORT_KALANI,2x BX Commando Droid Squad
 TEXT_TOOLTIP_FORTRESS,Fortress Mode
 TEXT_TOOLTIP_FORTRESS_DESCRIPTION,Reduces speed and shield regeneration, but doubles fire rate.
 TEXT_TOOLTIP_H_FACTORY_CIS_1,Armored Assault Tank-1: 3 / 8
@@ -252,21 +343,34 @@ TEXT_TOOLTIP_HMP_WEAP1,1x AV Blaster Cannon: 1 / 2.0s / 400m
 TEXT_TOOLTIP_HMP_WEAP2,2x AI Blaster Cannons: 4 / 3.0s / 400m
 TEXT_TOOLTIP_HMP_WEAP3,1x Light AI Blaster Cannon: 4 / 2.0s / 400m
 TEXT_TOOLTIP_HMP_WEAP4,1x Concussion Missile: 2 / 12.0s / 400m
+TEXT_TOOLTIP_HMP2,After the HMP Gunship’s success in the Clone Wars and the growing need for rapid troop deployment, General Kalani of the Confederacy of Independent Systems designed the HMP-II on Agamar, featuring greater transport capacity, stronger shields, and improved weapons.
+TEXT_TOOLTIP_HMP2_COMPANY,Company: 2x HMP-II Gunship
+TEXT_TOOLTIP_HMP2_HEALTH,Health: 150 (Heavy Speeder)
+TEXT_TOOLTIP_HMP2_MOVE,Speed: 5.5 | Turn: 5.0 
+TEXT_TOOLTIP_HMP2_SHIELD,Shields: 130 / [10/R] (Speeder)
+TEXT_TOOLTIP_HMP2_WEAP1,1x AV Blaster Cannon: 1 / 1.5s / 500m
+TEXT_TOOLTIP_HMP2_WEAP2,2x AI Blaster Cannons: 4 / 3.0s / 500m
+TEXT_TOOLTIP_HMP2_WEAP3,1x Light AI Blaster Cannon: 4 / 2.0s / 500m
+TEXT_TOOLTIP_HMP2_WEAP4,1x Concussion Missile: 4 / 12.0s / 500m
 TEXT_TOOLTIP_HYENA,A twin-headed expansion of the vulture droid intended to operate as a bomber, replacing prior Trade Federation bomber models in that role. Its slightly larger body size resolves several of the vulture droid's endurance issues, making it well suited to engaging enemy capital ships or dogfighting if pressed.
-TEXT_TOOLTIP_HYPORI,The sole MagnaGuard survivor of the Battle of Hypori (22 BBY), fought at General Grievous’s side and played a key role in the defeat of Jedi Master Daakman Barrek. Impressed by his performance, Grievous promoted him to captain of the Magnaguards, named him after the battle, and bestowed upon him the sacred Banner of Kalee - a rare mark of trust and respect. Unlike standard MagnaGuards, Hypori’s memory was never wiped, allowing him to develop a volatile personality and adopt the beliefs of the Kaleesh.
+TEXT_TOOLTIP_HYPORI,The sole Magnaguard survivor of the Battle of Hypori (22 BBY), fought at General Grievous’s side and played a key role in the defeat of Jedi Master Daakman Barrek. Impressed by his performance, Grievous promoted him to captain of the Magnaguards, named him after the battle, and bestowed upon him the sacred Banner of Kalee - a rare mark of trust and respect. Unlike standard Magnaguards, Hypori’s memory was never wiped, allowing him to develop a volatile personality and adopt the beliefs of the Kaleesh.
 TEXT_TOOLTIP_HYPORI_HEALTH,Health: 210 (Hero)
 TEXT_TOOLTIP_HYPORI_MOVE,Speed: 1.6
 TEXT_TOOLTIP_HYPORI_SWAP1,Refit the Bane of Hypori to accommodate fighter craft. As a trade-off, it will lose 20% of its cannons.
 TEXT_TOOLTIP_HYPORI_SWAP2,Refit the Bane of Hypori to increase its cannon count by 20%. As a trade-off, it will lose its hangar bays.
 TEXT_TOOLTIP_HYPORI_UPGRADE,Upgrade: Devastation [Only via Grievous Regime]
 TEXT_TOOLTIP_HYPORI_WEAP1,Modified Electrostaff: 1 / 1.0s / 1m
-TEXT_TOOLTIP_IG104,IG-104 is a MagnaGuard who serves under General Grievous and Captain Hypori. He is regarded as one of the finest MagnaGuard starfighter pilots. Beyond his extensive training in hand-to-hand combat against Jedi, he is also skilled in covert operations, with particular expertise in starfighter dogfights.
+TEXT_TOOLTIP_IG104,IG-104 is a Magnaguard who serves under General Grievous and Captain Hypori. He is regarded as one of the finest Magnaguard starfighter pilots. Beyond his extensive training in hand-to-hand combat against Jedi, he is also skilled in covert operations, with particular expertise in starfighter dogfights.
 TEXT_TOOLTIP_J1_CANNON,An awkwardly mobile, semi-autonomous artillery unit that requires a loading crew or field magazine attachment that is not particularly able to respond to battlefield conditions due to its cumbersome nature. It is notable for being able to operate independently, with or without crew.
 TEXT_TOOLTIP_J1_CANNON_COMPANY,Company: 2x J1 Proton Cannon
 TEXT_TOOLTIP_J1_CANNON_HEALTH,Health: 50 (Heavy Vehicle)
 TEXT_TOOLTIP_J1_CANNON_MOVE,Speed: 0.75 | Turn: 2.0 
 TEXT_TOOLTIP_J1_CANNON_WEAP1,1x Heavy Mass Driver Cannon: 1 / 3.0s / 800m
 TEXT_TOOLTIP_K2B4,K2-B4 was a T-series military strategic analysis and tactics droid of feminine programming who served the Confederacy of Independent Systems during the time of the Clone Wars. Assigned to the Lola Sayu system, she was placed in command of a Separatist defense fleet. K2-B4 also served as the second-in-command of Phindian Commandant Osi Sobeck, who headed the Confederacy's Citadel prison on the planet Lola Sayu.
+TEXT_TOOLTIP_KALANI,Kalani was a super tactical droid with the rank of general during the Clone Wars. An improvement over the standard tactical droid, Kalani's advanced processors and robust frame would make him an effective tactician and combatant. Dispatched by Count Dooku to Onderon to support its Confederacy-aligned government, Kalani efficiently cracked down on the resistance there until the situation made maintaining the planet unfeasible.
+TEXT_TOOLTIP_KALANI_HEALTH,Health: 200 (Hero)
+TEXT_TOOLTIP_KALANI_MOVE,Speed: 1.0
+TEXT_TOOLTIP_KALANI_WEAP1,1x E-5 Blaster Rifle: 3 / 1.25s / 240m
 TEXT_TOOLTIP_L_FACTORY_CIS_1,Single Trooper Aerial Platform: 3 / 6
 TEXT_TOOLTIP_L_FACTORY_CIS_3,OG-9 Homing Spider Droid: 3 / 6
 TEXT_TOOLTIP_LUCREHULK_DCS_SUPPORT,Droid Control Ship: 6% Combat bonus for all fighters
@@ -297,9 +401,15 @@ TEXT_TOOLTIP_MAGNAGUARD_WEAP1,1x Electrostaff: 1 / 1.0s / 1m
 TEXT_TOOLTIP_MAGNATRI,Another Techno Union contribution, the Magna is a large variant of the Octuptarra walker, or Tri-Droid. This colossal walker is heavily armed and armored, although not the most nimble due to its leg configuration.
 TEXT_TOOLTIP_MAGNATRI_COMPANY,Company: 2x Magna Octuptarra Droid
 TEXT_TOOLTIP_MAGNATRI_HEALTH,Health: 300 (Heavy Vehicle)
+TEXT_TOOLTIP_MAGNATRI_MISSILE,A variant of the Magna Octuptarra Tri-Droid, this model features reduced laser armament but compensates with an additional missile launcher. The launcher is effective against infantry, vehicles, and smaller targets. It is commonly deployed by the Techno Union on its controlled worlds.
 TEXT_TOOLTIP_MAGNATRI_MOVE,Speed: 0.5 | Turn: 2.0 
+TEXT_TOOLTIP_MAGNATRI_MSSILE_COMPANY,Company: 2x Octuptarra Missile Tri Droid
 TEXT_TOOLTIP_MAGNATRI_WEAP1,1x Super Heavy AV Blaster Cannon: 3 / 2.0s / 400m
+TEXT_TOOLTIP_MAGNATRI_WEAP2_MISSILE,1x Proton Missiles: 1 / 3.0s / 400m
+TEXT_TOOLTIP_MASSIFF,Serving on multiple guard and escort missions during the Clone Wars, 'The Massiff' was sent to Koboh near the end of the war, and powered down after the the shutdown command. He was later reactivated and reprogrammed by the Bedlam Raiders.
 TEXT_TOOLTIP_MASSIFF_HEALTH,Health: 235 (Hero)
+TEXT_TOOLTIP_MASSIFF_HEALTH,Health: 235 (Hero)
+TEXT_TOOLTIP_MASSIFF_MOVE,Speed: 1.6
 TEXT_TOOLTIP_MASSIFF_MOVE,Speed: 1.6
 TEXT_TOOLTIP_MTM,A variant of the Trade Federation’s MTT that, instead of carrying battle droid troops, transports bacta supplies and droid replacement parts. It serves as a heavily armored mobile field hospital during ground battles.
 TEXT_TOOLTIP_MTM_COMPANY,Company: 1x Multi-Troop Medic
@@ -346,8 +456,9 @@ TEXT_TOOLTIP_PAC_COMPANY,Company: 4x Platoon Attack Craft
 TEXT_TOOLTIP_PAC_HEALTH,Health: 150 (Light Vehicle)
 TEXT_TOOLTIP_PAC_MOVE,Speed: 2.0 | Turn: 1.0 
 TEXT_TOOLTIP_PAC_WEAP1,2x Light AI Blaster Cannons: 4 / 1.5s / 240m
-TEXT_TOOLTIP_PORAX,The Porax-38 Starfighter, crafted on Utapau for the Confederacy, this distinctive fighter with its curved wings was the preferred craft of General Grievous’ MagnaGuards, feared for their ruthless skill in battle despite the Porax’s exposed cockpit.
-TEXT_TOOLTIP_PROVIDENCE_DREADNOUGHT,An up-scaled version of a carrier/destroyer Providence used as a flagship in fleet actions or as a contender to larger Republic vessels. It retains a similar armament and role but is progressively more powerful than its smaller sibling.
+TEXT_TOOLTIP_PORAX,The Porax-38 Starfighter, crafted on Utapau for the Confederacy, this distinctive fighter with its curved wings was the preferred craft of General Grievous’ Magnaguards, feared for their ruthless skill in battle despite the Porax’s exposed cockpit.
+TEXT_TOOLTIP_PROVIDENCE_DREADNOUGHT,An up-scaled version of a Carrier/Destroyer Providence used as a flagship in fleet actions or as a contender to larger Republic vessels. It retains a similar armament and role but is progressively more powerful than its smaller sibling.
+TEXT_TOOLTIP_PROVIDENCE_DREADNOUGHT_HULL,Hull: 9750 (Capital)
 TEXT_TOOLTIP_PROVIDENCE_DREADNOUGHT_MOVE,Speed: 2.8 | Accel: 0.125 | Turn: 0.2
 TEXT_TOOLTIP_PROVIDENCE_DREADNOUGHT_SHIELD,Shields: 9200 / [90/R] (Capital)
 TEXT_TOOLTIP_PROVIDENCE_DREADNOUGHT_SQUADRON,Fighters: 3 / 10 | Bombers: 3 / 10
@@ -368,6 +479,15 @@ TEXT_TOOLTIP_PROVIDENCE_HERO_WEAP3,2x Light Anti-Fighter Ion Cannons: 2 / 1.67s 
 TEXT_TOOLTIP_PROVIDENCE_HERO_WEAP4,3x Light Dual Laser Cannons: 2 / 0.44s / 3.7km
 TEXT_TOOLTIP_PROVIDENCE_HERO_WEAP5,4x Light Proton Torpedoes: 4 / 8.0s / 5.2km
 TEXT_TOOLTIP_PROVIDENCE_HERO_WEAP6,2x Mass Drivers: 2 / 1.67s / 7.2km
+TEXT_TOOLTIP_PROVIDENCE2,While in hiding from the Empire and consolidating his forces, Admiral Aut-0 of the Confederate Navy devised an advanced version of the famed Providence-class Carrier/Destroyer, featuring greater firepower, expanded hangar capacity, and improved anti-fighter defenses.
+TEXT_TOOLTIP_PROVIDENCE2_HULL,Hull: 4560 (Heavy Frigate)
+TEXT_TOOLTIP_PROVIDENCE2_SHIELD,Shields: 4200 / [45/R] (Heavy Frigate)
+TEXT_TOOLTIP_PROVIDENCE2_SQUADRON,Fighters: 3 / 6 | Bombers: 2 / 6
+TEXT_TOOLTIP_PROVIDENCE2_WEAP1,4x Light Quad Turbolasers: 2 / 2.22s / 6.6km
+TEXT_TOOLTIP_PROVIDENCE2_WEAP2,1x Heavy Ion Cannon: 2 / 3.5s / 8.2km
+TEXT_TOOLTIP_PROVIDENCE2_WEAP3,4x Light Anti-Fighter Ion Cannons: 2 / 1.67s / 4.0km
+TEXT_TOOLTIP_PROVIDENCE2_WEAP4,3x Light Dual Turbolasers: 2 / 1.0s / 5.4km
+TEXT_TOOLTIP_PROVIDENCE2_WEAP5,4x Light Proton Torpedoes: 5 / 8.0s / 6.7km
 TEXT_TOOLTIP_RECUSANT_DREADNOUGHT,A rare, up-sized version of a Recusant used as a flagship or planetary assault platform. While larger than its counterpart, it is still comparatively fragile, but it is equipped with even more weaponry for long-range support.
 TEXT_TOOLTIP_RECUSANT_DREADNOUGHT_HULL,Hull: 4956 (Heavy Frigate)
 TEXT_TOOLTIP_RECUSANT_DREADNOUGHT_MOVE,Speed: 3.15 | Accel: 0.15 | Turn: 0.2
@@ -443,8 +563,10 @@ TEXT_TOOLTIP_SUPER_TANK_SHIELD,Shields: 250 / [10/R] (Heavy Vehicle)
 TEXT_TOOLTIP_SUPER_TANK_WEAP1,2x AV Blaster Cannons: 2 / 2.0s / 400m
 TEXT_TOOLTIP_SUPER_TANK_WEAP2,2x Light AI Blaster Cannons: 2 / 1.0s / 320m
 TEXT_TOOLTIP_SUPER_TANK_WEAP3,1x Heavy Proton Missile: 2 / 7.41s / 1440m
+TEXT_TOOLTIP_TARN,Tarn was Count Dooku’s personal tactical droid. He was tasked with protecting Serenno until 20 BBY. When Super Tactical Droids began replacing standard models, Tarn was succeeded by Kraken. He was then reassigned to take a leading role in the defense of Mygeeto, a mission he carried out successfully until his deactivation in 19 BBY following the issuance of the shutdown command.
 TEXT_TOOLTIP_TRIFIGHTER,A compact, Colicoid designed droid fighter built around a reactor and advanced droid brain. It is fast, powerful, and agile but costly enough to not be deployed in as great numbers as vultures and their derivatives. It is very well suited to dogfighting and intercepting bombers.
 TEXT_TOOLTIP_UNITS_CISSC,Lucrehulk Goliath: Allows unit construction.
+TEXT_TOOLTIP_VULTURE_DROID,A small droid fighter that relies on numbers and maneuverability to win dogfights. While modular enough to carry munitions, they are often replaced with extra fuel slugs to increase flight time from being minutes long. They are best used to swarm enemy fighters and bombers.
 TEXT_TOOLTIP_XANADU_BLOOD_HULL,Health: 250 (Fighter)
 TEXT_TOOLTIP_XANADU_BLOOD_SHIELD,Shields: 170 / [22/R] (Fighter)
 TEXT_TRIFIGHTER_SQUADRON,Tri-fighter Squadron
@@ -452,27 +574,35 @@ TEXT_TRIFIGHTER_SQUADRON_HALF,Tri-fighter Squadron 1/2
 TEXT_TRIFIGHTER_SQUADRON2,Tri-fighter Squadron x2
 TEXT_UNIT_ADVANCED_ESTAP,Advanced E-STAP
 TEXT_UNIT_B3,B3 Ultra Battle Droid
+TEXT_UNIT_BATTLE_DROID_LIGHT_PLATOON,B1 Battle Droid Light Platoon
+TEXT_UNIT_BATTLE_DROID_MTT_SQUAD,B1 Battle Droid Assault Squad
 TEXT_UNIT_BX_COMMANDO,BX Commando Droid
 TEXT_UNIT_BX_COMMANDO_AT_LIGHT,BX Commando Droid Light AT
 TEXT_UNIT_BX_COMMANDO_GRENADIER,BX Commando Droid Grenadier
 TEXT_UNIT_BX_COMMANDO_GUNNER,BX Commando Droid Gunner
 TEXT_UNIT_BX_COMMANDO_OFFICER,BX Commando Droid Officer
 TEXT_UNIT_BX_COMMANDO_SNIPER,BX Commando Droid Sniper
+TEXT_UNIT_BX_COMMANDO_SPY,BX Spy Droid Platoon
 TEXT_UNIT_C9979,C-9979 Carrier
 TEXT_UNIT_CB3,C-B3 Cortosis Battle Droid
+TEXT_UNIT_CHAMELEON_DROID,Chameleon Droid
 TEXT_UNIT_COYOTE_BOMBER,Coyote Advanced Droid Bomber
 TEXT_UNIT_CRAB_DROID,Crab Droid
 TEXT_UNIT_DEFOLIATOR,Defoliator Deployment Tank
 TEXT_UNIT_DH_OMNI,DH-Omni Support Vessel
 TEXT_UNIT_DIAMOND,Diamond Cruiser
+TEXT_UNIT_DROCH,Droch-class Boarding Ship
 TEXT_UNIT_EG_BX_COMMANDO,Elite Guard BX Commando Droid
 TEXT_UNIT_EG_BX_COMMANDO_OFFICER,Elite Guard BX Commando Droid Officer
+TEXT_UNIT_ELITE_MAGNAGUARD,Elite Magnaguard
 TEXT_UNIT_HAG,HAG-M
 TEXT_UNIT_HAML,Heavy Armored Missile Launcher
 TEXT_UNIT_HAML_COMPANY,HAML Company
 TEXT_UNIT_HARDCELL,Hardcell Missile Ship
 TEXT_UNIT_HMP,Heavy Missile Platform Gunship
 TEXT_UNIT_HMP_COMPANY,HMP Gunship Company
+TEXT_UNIT_HMP2,Heavy Missile Platform-II Gunship
+TEXT_UNIT_HMP2_COMPANY,Heavy Missile Platform-II Gunship
 TEXT_UNIT_HYENA_DROID,Hyena Droid Bomber
 TEXT_UNIT_IG104,IG-104
 TEXT_UNIT_J1_CANNON,J-1 Proton Cannon
@@ -493,7 +623,9 @@ TEXT_UNIT_PAC,Platoon Attack Craft
 TEXT_UNIT_PAC_COMPANY,Platoon Attack Craft Company
 TEXT_UNIT_PORAX,Porax-38 Starfighter
 TEXT_UNIT_PROVIDENCE_DREADNOUGHT,Providence Dreadnought
+TEXT_UNIT_PROVIDENCE2,Providence Carrier/Destroyer II
 TEXT_UNIT_RECUSANT_DREADNOUGHT,Recusant Dreadnought
+TEXT_UNIT_REPAIR_DROID,B1 Repair Droid
 TEXT_UNIT_RESEARCH_CISSC_PRODUCTIONBOOST,Optimize Production Process
 TEXT_UNIT_S_B2_RESEARCH,Shielded B2 Droids
 TEXT_UNIT_S_VULTURES_RESEARCH,Shielded Vulture Droid
@@ -506,5 +638,3 @@ TEXT_UNIT_VULTURE_DROID,Vulture Droid Mark 1
 TEXT_VULTURE_SQUADRON,Vulture Droid-I Squadron
 TEXT_VULTURE_SQUADRON_HALF,Vulture Droid-I Squadron 1/2
 TEXT_VULTURE_SQUADRON2,Vulture Droid-I Squadron x2
-TEXT_TOOLTIP_BONUS_PRICE_TIME_CISSC,Price and time reduction for all units, ships and structures:
-TEXT_TOOLTIP_BONUS_DISCOUNT_CISSC,Price: -35% | Time: -35%

@@ -10,6 +10,9 @@ Hyena_Bombing_Run
 Coyote_Bomber_Bombing_Run
 Advanced_ESTAP_Bombing_Run
 Belbullab22_Squadron
+Lucrehulk_Control_Death_Clone_00
+Lucrehulk_Control_Death_Clone_01
+Munificent_Heavy_Cruiser
 
 
 

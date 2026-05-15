@@ -1,37 +1,35 @@
 return {
 	Space_Unit_Table = {
-		{"DH_Omni", 100}
-		,{"Recusant_CIS", 100}
-		,{"Munificent_C3_CIS", 100}
-		,{"Munificent_CIS", 100}
-		,{"Munifex", 100}
-		,{"C9979_Carrier", 100}
-		,{"Hardcell", 100}
-		,{"Diamond_Frigate", 100}
+		{"DH_Omni", 1}
+		,{"Recusant_CIS", 2}
+		,{"Munificent_CIS", 4}
+		,{"Munifex", 2.2}
+		,{"C9979_Carrier", 2.2}
+		,{"Hardcell", 3}
+		,{"Diamond_Frigate", 3}
+		,{"Providence_Carrier_Destroyer_CIS", 0.8}
 	},
-	-- Land_Unit_Table = {
-	-- 	{"Imperial_Army_Trooper_Company", 4}
-	-- 	,{"Imperial_Army_Guard_Company", 3}
-	-- 	,{"Imperial_Navy_Trooper_Company", 1}
-	-- 	,{"Imperial_Stormtrooper_Company", 2}
-	-- 	,{"Destroyer_Droid_I_W_Company", 0.5}
-	-- 	,{"Imperial_Dwarf_Spider_Droid_Company", 2, StartYear = 12}
-	-- 	,{"Shadow_Stormtrooper_Company", 0.3}
-	-- 	,{"Imperial_Jumptrooper_Company", 1}
-	-- 	,{"Imperial_Scout_Trooper_Company", 1}
-	-- 	,{"Imperial_74Z_Bike_Company", 2}
-	-- 	,{"AT_ST_Company", 3}
-	-- 	,{"AT_ST_A_Company", 3, StartYear = 10}
-	-- 	,{"Chariot_LAV_Company", 3}
-	-- 	,{"S_1_Firehawke_Company", 2}
-	-- 	,{"PX4_Company", 1}
-	-- 	,{"Imperial_AT_AT_Walker_Company", 2}
-	-- 	,{"Imperial_AT_AT_Walker_Turbolaser_Refit_Company", 3, StartYear = 10}
-	-- 	,{"Imperial_Dropship_Transport_Company", 1}
-	-- 	,{"Deathhawk_Company", 1}
-	-- 	,{"SPMAG_Walker_Company", 1}
-	-- 	,{"SD_9_Droid_Company", 0.1, StartYear = 9}
-	-- },
+	 Land_Unit_Table = {
+	 	{"B1_Droid_Company", 5}
+	 	,{"BX_Commando_Company", 3}
+	 	,{"B2_Droid_Company_CIS", 2}
+	 	,{"Destroyer_Droid_I_W_Company", 0.5}
+	 	,{"CIS_AAT_Company", 2.5}
+	 	,{"CIS_Defoliator_Company1", 0.3}
+		,{"B3_Squad", 0.3}
+		,{"CB3_Squad", 0.1}
+		,{"Magnaguard_Squad", 0.8}
+		,{"Elite_Magnaguard_Squad", 0.3}
+		,{"CIS_Super_Tank_Company", 0.3}
+	 	,{"CIS_MTT_Company", 1}
+	 	,{"CIS_STAP_Company", 2}
+	 	,{"Magna_Octuptarra_Company", 1}
+	 	,{"Crab_Droid_Company", 2}
+	 	,{"HMP_Company", 2}
+	 	,{"OG9_Company", 1.7}
+		,{"CIS_Destroyer_Droid_Company", 1.7}
+
+	 },
 	Groundbase_Table = {
 		"CIS_Ground_Barracks",
 		"CIS_Ground_Barracks",

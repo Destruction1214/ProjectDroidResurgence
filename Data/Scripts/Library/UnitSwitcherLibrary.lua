@@ -108,5 +108,8 @@ return {
 	["HYPORI_SWAP1"] = {"Hypori_Omni","Hypori_Team2"},
 	["HYPORI_SWAP2"] = {"Hypori_Omni2","Hypori_Team"},
 	["CIS_SPACE_CAPITAL_DUMMY"] = {"CIS_Space_Capital3","CIS_Space_Capital4"},
-	
+	["DUMMY_KOBOH_GROUP"] = {nil,{"Massiff_Team", "E3_VE3_Team", "B2D2_Team"}},
+	["DUMMY_AGAMAR_GROUP"] = {nil,{"Kalani_Team"}, Unlocks = {"HMP2_Company"}},
+	["DUMMY_SERENNO_GROUP"] = {nil,{"Tarn_Munificent", "IG104_Team", "Elite_Magnaguard_Squad", "Elite_Magnaguard_Squad", "Elite_Magnaguard_Squad", "Elite_Magnaguard_Squad"}},
+	["DUMMY_SULLUST_GROUP"] = {nil,{"AutO_Providence"}, Unlocks = {"Providence2_Carrier_Destroyer_CIS"}},
 }

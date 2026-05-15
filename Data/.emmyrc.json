@@ -10,7 +10,8 @@
       "global-in-non-module",
       "need-check-nil",
       "need-check-nil",
-      "undefined-field"
+      "undefined-field",
+      "assign-type-mismatch"
     ]
   }
 }
