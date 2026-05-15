@@ -67,10 +67,10 @@ function BuildStructuresGroundMission:Begin(reward_group, week_start)
 
 	MasterBuildingTable = require("eawx-plugins/intervention-missions/build-options/BuildOptionTables_"..self.player.Get_Faction_Name())
 	--ProDR
-	local proteus = GlobalValue.Get("PROTEUS_GROUP_NAME")
-	if proteus == "CIS_REMNANTS" then
-		MasterBuildingTable = require("eawx-plugins/intervention-missions/build-options/BuildOptionTables_"..proteus)
-	end
+	-- local proteus = GlobalValue.Get("PROTEUS_GROUP_NAME")
+	-- if proteus == "CIS_REMNANTS" then
+	-- 	MasterBuildingTable = require("eawx-plugins/intervention-missions/build-options/BuildOptionTables_"..proteus)
+	-- end
 	--/
 	if self.RewardGroupTable.GroupSupport then
 		local build_list_group = self.BuildList.."_"..self.RewardGroupTable.GroupSupport

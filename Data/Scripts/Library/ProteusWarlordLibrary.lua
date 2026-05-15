@@ -527,25 +527,27 @@ return {
 			Planets = {"HYPORI"},
 			LeaderTable = {"NO_LEGITIMACY"},
 			LeaderEndingNames = {""},
-			HeroList = {"Hypori_Team", "K2B4_Providence", "IG104_Team"},
+			HeroList = {"Hypori_Team", "Doctor_Team"},
 			FighterHero = {},
 			UnlockList = {
 				-- Structures
 				"CIS_Office", "CIS_Ground_Barracks", "CIS_Ground_Light_Vehicle_Factory", "CIS_Ground_Heavy_Vehicle_Factory", "CIS_Ground_Advanced_Vehicle_Factory",
-				"CIS_Shipyard_Level_One", "CIS_Shipyard_Level_Two", "CIS_Shipyard_Level_Three", "CIS_Shipyard_Level_Four",
+				"CIS_Shipyard_Level_One", "CIS_Shipyard_Level_Two", "CIS_Shipyard_Level_Three", "CIS_Shipyard_Level_Four", "CIS_Baktoid_HQ",
 				-- Ground
-				"Hailfire_Company_CIS", "CIS_Super_Tank_Company", "CIS_MAF_Company", "CIS_MTT_Company", "MTT_CIS_Support_Company", "CIS_Defoliator_Company1", "HAG_Company_CIS", "J1_Cannon_Company", "CIS_AAT_Company",
-				"HAML_Company", "OG9_Company", "HMP_Company",
-				"Dwarf_Spider_Droid_Company_CIS", "B2_Droid_Company_CIS", "CIS_STAP_Company", "BX_Commando_Company", "CB3_Squad", "B1_Droid_Company", "B1_Droid_Marine_Company", "B3_Squad", "Magnaguard_Squad"
+				"Hailfire_Company_CIS", "CIS_MTT_Company", "HAG_Company_CIS", "J1_Cannon_Company", "CIS_AAT_Company",
+				"HAML_Company", "OG9_Company", "HMP_Company", "Persuader_Company_CIS", "PAC_Company_CIS",
+				"Dwarf_Spider_Droid_Company_CIS", "B2_Droid_Company_CIS", "CIS_STAP_Company", "BX_Commando_Company", "B1_Droid_Company", "CIS_Destroyer_Droid_Company", "CIS_Destroyer_II_Droid_Company",
+				-- Other stuff
+				"Dummy_Koboh_Group","Dummy_Agamar_Group","Dummy_Serenno_Group","Dummy_Sullust_Group"
 			},
 			LockList = {
 				"Imperial_Army_Guard_Company", "Imperial_Army_Trooper_Company", "Raptor_Trooper_Company",
-				"Imperial_74Z_Bike_Company", "Imperial_AT_AP_Walker_Company", "Imperial_AT_PT_Company", "AT_MP_Company", "AT_ST_Company", "Chariot_LAV_Company", "AT_AA_Walker_Company", "TIE_Crawler_Company", "S_1_Firehawke_Company",
+				"Imperial_74Z_Bike_Company", "Imperial_AT_AP_Walker_Company", "Imperial_AT_PT_Company", "AT_MP_Company", "AT_ST_Company", "Chariot_LAV_Company", "AT_AA_Walker_Company", "TIE_Crawler_Company", "S_1_Firehawke_Company", "Destroyer_Droid_II_Company",
 				"Deathhawk_Company", "SPMAG_Walker_Company", "Imperial_Dropship_Transport_Company", "PX4_Company", "Imperial_A5_Juggernaut_Company", "Imperial_AT_AT_Walker_Company",
 				"Interdictor_Star_Destroyer", "Imperial_I_Star_Destroyer", "Imperial_II_Star_Destroyer", "Allegiance_Battlecruiser", "Executor_Star_Dreadnought",
 				"Pursuit_Light_Cruiser", "Imperial_DHC", "Vindicator_Cruiser", "Dragon_Heavy_Cruiser", "Acclamator_II", "Immobilizer_418", "Acclamator_I_Carrier", "Victory_I_Star_Destroyer", "Victory_II_Star_Destroyer", "Bulwark_I", "Procursator_Star_Destroyer", "Venator_Star_Destroyer",
 				"Raider_I_Corvette", "Charger_C70", "CR92A", "Lancer_Frigate", "Marauder_Cruiser", "Carrack_Cruiser", "Ton_Falk_Escort_Carrier", "Star_Galleon", "Strike_Cruiser", "Eidolon",
-				"Imperial_Proteus_Capital", "Imperial_Proteus_Office", "I_Ground_Barracks", "I_Ground_Light_Vehicle_Factory", "I_Ground_Heavy_Vehicle_Factory", "I_Ground_Advanced_Vehicle_Factory", "Imperial_Proteus_Shipyard_Level_One", "Imperial_Proteus_Shipyard_Level_Two", "Imperial_Proteus_Shipyard_Level_Three", "Imperial_Proteus_Shipyard_Level_Four"
+				"Imperial_Proteus_Capital", "Imperial_Proteus_Office", "I_Ground_Barracks", "I_Ground_Light_Vehicle_Factory", "I_Ground_Heavy_Vehicle_Factory", "I_Ground_Advanced_Vehicle_Factory", "Imperial_Proteus_Shipyard_Level_One", "Imperial_Proteus_Shipyard_Level_Two", "Imperial_Proteus_Shipyard_Level_Three", "Imperial_Proteus_Shipyard_Level_Four", "Baktoid_HQ"
 			},
 			IntroText = {"TEXT_CONQUEST_CIS_REMNANTS"},
 			IntroHolo = "",

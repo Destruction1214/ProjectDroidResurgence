@@ -503,6 +503,8 @@
 									Parameter_Type = "Uulshos_HQ",
 									Parameter_Type = "Yutrane_Trackata_HQ",
 									Parameter_Type = "zZip_HQ",
+									Parameter_Type = "CIS_Baktoid_HQ",
+									Parameter_Type = "Small_Baktoid_HQ",
 									Parameter_Only_Consider_Complete = 1.0
 									}
 	</Planet_Has_Ground_Company>
@@ -596,6 +598,8 @@
 									Parameter_Type = "Uulshos_HQ",
 									Parameter_Type = "Yutrane_Trackata_HQ",
 									Parameter_Type = "zZip_HQ",
+									Parameter_Type = "CIS_Baktoid_HQ",
+									Parameter_Type = "Small_Baktoid_HQ",
 									Parameter_Only_Consider_Complete = 1.0
 									}
 	</Player_Has_Ground_Company>
@@ -641,11 +645,11 @@
 									Parameter_Type = "Techno_Union_Capital",
 									Parameter_Type = "Yevetha_Capital",
 									Parameter_Type = "ZE_Capital_Alternate",
-									Parameter_Type = "CSA_Space_Capital",
-									Parameter_Type = "CSA_Space_Capital2",
-									Parameter_Type = "CSA_Space_Capital3",
-									Parameter_Type = "CSA_Space_Capital4",
-									Parameter_Type = "CSA_Space_Capital5",
+									Parameter_Type = "CIS_Space_Capital",
+									Parameter_Type = "CIS_Space_Capital2",
+									Parameter_Type = "CIS_Space_Capital3",
+									Parameter_Type = "CIS_Space_Capital4",
+									Parameter_Type = "CIS_Space_Capital5",
 									Parameter_Only_Consider_Complete = 1.0
 									}
 	</Planet_Has_Capital_Building>

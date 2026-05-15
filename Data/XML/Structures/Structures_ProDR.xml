@@ -163,6 +163,26 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPACE_OBSTACLE, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ION_STUN_EFFECT</SpaceBehavior>
 		<Lua_Script>GenericGameObject</Lua_Script>
 
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+
+				<Recharge_Seconds>60</Recharge_Seconds>
+
+				<!-- This is the radius within which we can "drop" the projectile (targeting radius) -->
+				<!-- The actual radius of ability is in projectile XML -->
+				<Effective_Radius> 10000.0 </Effective_Radius>
+			    <Spawned_Object_Type>Microjump_Marker</Spawned_Object_Type>
+
+                <!-- Area effect decal size depends on "Antills_Weaken_Enemy_Effect" -->
+                <Area_Effect_Decal_Distance> 300 </Area_Effect_Decal_Distance>
+				<Alternate_Name_Text>TEXT_ABILITY_ROTATE</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_ABILITY_ROTATE_DESCRIPTION</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_ASSAULT.TGA</Alternate_Icon_Name>
+			</Unit_Ability>
+
+	    </Unit_Abilities_Data>
+		
 		<Abilities SubObjectList="Yes">
 			<Planet_Income_Bonus_Ability Name="Capital_Income_Bonus">
 				<Specific_Mod_Source_Text>TEXT_ECONOMY_CAPITAL</Specific_Mod_Source_Text>
@@ -556,15 +576,12 @@
 				B1_Droid_Company,
 				Crab_Droid_Company,
 				CIS_STAP_Company,
-				Dwarf_Spider_Droid_Company,
 				Destroyer_Droid_I_P_Company,
-				Neimoidian_Guard_Company,
 				B2_Droid_Company,
 				BX_Commando_Company,
 				Nimbus_Commando_Company,
 				B1_Droid_Marine_Company,
 				Destroyer_Droid_II_Company,
-				Skakoan_Combat_Engineer_Company,
 		</Tactical_Buildable_Objects_Multiplayer>
 
 		<!-- Era 4-5 -->
@@ -613,11 +630,8 @@
 	    <Tactical_Buildable_Objects_Multiplayer>
 			Imperial_Proteus,
 				OG9_Company,
-				CIS_GAT_Company,
-				PAC_Company,
 				CIS_AAT_Company,
 				Hailfire_Company,
-				HAG_Company,
 		</Tactical_Buildable_Objects_Multiplayer>
 
 		<!-- Era 3-4 -->
@@ -737,14 +751,14 @@
 		<Starting_Spawned_Units_Tech_0>Vulture_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>Vulture_Squadron, -1</Reserve_Spawned_Units_Tech_0>
 
-		<Starting_Spawned_Units_Tech_0>Scarab_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>Scarab_Squadron, 2</Reserve_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TriFighter_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TriFighter_Squadron, 2</Reserve_Spawned_Units_Tech_0>
 
 		<Starting_Spawned_Units_Tech_0>Hyena_Squadron_Double, 1</Starting_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>Hyena_Squadron_Double, 2</Reserve_Spawned_Units_Tech_0>
 
-		<Starting_Spawned_Units_Tech_0>Skirmish_Diamond_Frigate, 1</Starting_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>Skirmish_Diamond_Frigate, 1</Reserve_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Diamond_Frigate, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Diamond_Frigate, 1</Reserve_Spawned_Units_Tech_0>
 
 		<Starting_Spawned_Units_Tech_0>Skirmish_Hardcell, 2</Starting_Spawned_Units_Tech_0>
 
@@ -819,14 +833,14 @@
 		<Starting_Spawned_Units_Tech_0>Vulture_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>Vulture_Squadron, -1</Reserve_Spawned_Units_Tech_0>
 
-		<Starting_Spawned_Units_Tech_0>Scarab_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>Scarab_Squadron, 2</Reserve_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TriFighter_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TriFighter_Squadron, 2</Reserve_Spawned_Units_Tech_0>
 
 		<Starting_Spawned_Units_Tech_0>Hyena_Squadron_Double, 1</Starting_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>Hyena_Squadron_Double, 2</Reserve_Spawned_Units_Tech_0>
 
-		<Starting_Spawned_Units_Tech_0>Skirmish_Diamond_Frigate, 1</Starting_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>Skirmish_Diamond_Frigate, 2</Reserve_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Diamond_Frigate, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Diamond_Frigate, 2</Reserve_Spawned_Units_Tech_0>
 
 		<Starting_Spawned_Units_Tech_0>Skirmish_Munifex, 3</Starting_Spawned_Units_Tech_0>
 
@@ -905,14 +919,14 @@
 		<Starting_Spawned_Units_Tech_0>Vulture_Squadron, 3</Starting_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>Vulture_Squadron, -1</Reserve_Spawned_Units_Tech_0>
 
-		<Starting_Spawned_Units_Tech_0>Scarab_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>Scarab_Squadron, 2</Reserve_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TriFighter_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TriFighter_Squadron, 2</Reserve_Spawned_Units_Tech_0>
 
 		<Starting_Spawned_Units_Tech_0>Hyena_Squadron, 3</Starting_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>Hyena_Squadron, 6</Reserve_Spawned_Units_Tech_0>
 
-		<Starting_Spawned_Units_Tech_0>Skirmish_Diamond_Frigate, 1</Starting_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>Skirmish_Diamond_Frigate, 2</Reserve_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Diamond_Frigate, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Diamond_Frigate, 2</Reserve_Spawned_Units_Tech_0>
 
 		<Starting_Spawned_Units_Tech_0>Skirmish_Munificent, 2</Starting_Spawned_Units_Tech_0>
 
@@ -934,8 +948,8 @@
 		<Starting_Spawned_Units_Tech_2>Hyena_Squadron_Double, 3</Starting_Spawned_Units_Tech_2>
 		<Reserve_Spawned_Units_Tech_2>Hyena_Squadron_Double, 6</Reserve_Spawned_Units_Tech_2>
 
-		<Starting_Spawned_Units_Tech_2>Skirmish_Diamond_Frigate, 1</Starting_Spawned_Units_Tech_2>
-		<Reserve_Spawned_Units_Tech_2>Skirmish_Diamond_Frigate, 2</Reserve_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_2>Diamond_Frigate, 1</Starting_Spawned_Units_Tech_2>
+		<Reserve_Spawned_Units_Tech_2>Diamond_Frigate, 2</Reserve_Spawned_Units_Tech_2>
 
 		<Starting_Spawned_Units_Tech_2>Skirmish_Munificent, 2</Starting_Spawned_Units_Tech_2>
 
@@ -1056,4 +1070,127 @@
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_DUMMY_ART, null </SFXEvent_Hardpoint_Destroyed>
 
     </SpecialStructure>
+	
+	<SpecialStructure Name="CIS_Baktoid_HQ">
+		<Variant_Of_Existing_Type>Template_Galactic_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_COMPANY_BIG_BAKTOID</Text_ID>
+
+		<Land_Model_Name>EB_ResearchFacility.alo</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+
+		<Icon_Name>I_BUTTON_BAW.TGA</Icon_Name>
+
+		<Affiliation>Imperial_Proteus</Affiliation>
+
+		<Build_Cost_Credits>4500</Build_Cost_Credits>
+
+		<Required_Planets>Hypori</Required_Planets>
+
+		<Encyclopedia_Text> 
+		TEXT_TOOLTIP_BONUS_PRICE_TIME_COMPANY
+		TEXT_COMPANY_BIG_BAKTOID_DESCRIPTION
+		TEXT_TOOLTIP_SEPARATOR_CAPABILITIES_BLOCK
+		TEXT_TOOLTIP_CIS_MARKET
+		TEXT_TOOLTIP_SEPARATOR_STAT_BLOCK
+		TEXT_TOOLTIP_COMPANY_HEALTH
+		TEXT_TOOLTIP_SEPARATOR_GARRISON_BLOCK
+		TEXT_COMPANY_GARRISON_BIG_BAKTOID1
+		TEXT_COMPANY_GARRISON_BIG_BAKTOID2
+		TEXT_COMPANY_GARRISON_BIG_BAKTOID3
+		TEXT_TOOLTIP_SEPARATOR_BONUS_BLOCK
+		TEXT_TOOLTIP_BONUS_DISCOUNT_COMPANY
+		TEXT_TOOLTIP_BONUS_INFLUENCE_PLUS_1
+		TEXT_TOOLTIP_BONUS_INFRASTRUCTURE_PLUS_1
+		TEXT_TOOLTIP_SEPARATOR_LOCATION_BLOCK 
+		TEXT_OBJECT_STAR_SYSTEM_HYPORI
+		</Encyclopedia_Text>
+
+		<Starting_Spawned_Units_Tech_0>B3_Droid, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>B3_Droid, 1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>OOM_Security_Squad, 4</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>OOM_Security_Squad, 10</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>CIS_AAT, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>CIS_AAT, 2</Reserve_Spawned_Units_Tech_0>
+
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="Baktoid_Reduce_Production_Price">
+				<Applicable_Unit_Categories/>
+				<Applicable_Unit_Types>  CIS_AAT_Company, J1_Cannon_Company, HAG_Company_CIS, MTT_CIS_Support_Company, CIS_MTT_Company, CIS_Super_Tank_Company, B1_Droid_Company, B2_Droid_Company_CIS, Shielded_B2_Droid_Company, B3_Squad, CB3_Squad, BX_Commando_Company, CIS_STAP_Company, Crab_Droid_Company, Dwarf_Spider_Droid_Company_CIS, OG9_Company, HMP_Company, HAML_Company, CIS_Defoliator_Company1, HMP2_Company</Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.30</Price_Reduction_Percentage>
+				<Stacking_Category>50</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="Baktoid_Production_Time_Bonus">
+				<Applicable_Unit_Categories/>
+				<Applicable_Unit_Types>  CIS_AAT_Company, J1_Cannon_Company, HAG_Company_CIS, MTT_CIS_Support_Company, CIS_MTT_Company, CIS_Super_Tank_Company, B1_Droid_Company, B2_Droid_Company_CIS, Shielded_B2_Droid_Company, B3_Squad, CB3_Squad, BX_Commando_Company, CIS_STAP_Company, Crab_Droid_Company, Dwarf_Spider_Droid_Company_CIS, OG9_Company, HMP_Company, HAML_Company, CIS_Defoliator_Company1, HMP2_Company</Applicable_Unit_Types>
+				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
+				<Stacking_Category>50</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</SpecialStructure>
+	
+	<SpecialStructure Name="Small_Baktoid_HQ">
+		<Variant_Of_Existing_Type>Template_Galactic_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_COMPANY_SMALL_BAKTOID</Text_ID>
+
+		<Land_Model_Name>EB_ResearchFacility.alo</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+
+		<Icon_Name>i_button_baktoid.TGA</Icon_Name>
+
+		<Affiliation>Imperial_Proteus</Affiliation>
+
+		<Build_Cost_Credits>2500</Build_Cost_Credits>
+
+		<Required_Planets />
+
+		<Encyclopedia_Text> 
+		TEXT_TOOLTIP_BONUS_PRICE_TIME_COMPANY
+		TEXT_COMPANY_BIG_BAKTOID_DESCRIPTION
+		TEXT_TOOLTIP_SEPARATOR_CAPABILITIES_BLOCK
+		TEXT_TOOLTIP_CIS_MARKET
+		TEXT_TOOLTIP_SEPARATOR_STAT_BLOCK
+		TEXT_TOOLTIP_COMPANY_HEALTH
+		TEXT_TOOLTIP_SEPARATOR_GARRISON_BLOCK
+		TEXT_COMPANY_GARRISON_BIG_BAKTOID1
+		TEXT_COMPANY_GARRISON_BIG_BAKTOID2
+		TEXT_TOOLTIP_SEPARATOR_BONUS_BLOCK
+		TEXT_TOOLTIP_BONUS_DISCOUNT_COMPANY_LOW
+		TEXT_TOOLTIP_BONUS_INFLUENCE_PLUS_1
+		TEXT_TOOLTIP_BONUS_INFRASTRUCTURE_PLUS_1
+		TEXT_TOOLTIP_SEPARATOR_LIMITS_BLOCK
+		TEXT_TOOLTIP_BUILDLIMIT_SMALL_BAKTOID
+		</Encyclopedia_Text>
+		
+		<Build_Limit_Current_Per_Player>5</Build_Limit_Current_Per_Player>
+		
+		<Starting_Spawned_Units_Tech_0>OOM_Security_Squad, 4</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>OOM_Security_Squad, 10</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>CIS_AAT, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>CIS_AAT, 2</Reserve_Spawned_Units_Tech_0>
+
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="Baktoid_Reduce_Production_Price">
+				<Applicable_Unit_Categories/>
+				<Applicable_Unit_Types>  CIS_AAT_Company, J1_Cannon_Company, HAG_Company_CIS, MTT_CIS_Support_Company, CIS_MTT_Company, CIS_Super_Tank_Company, B1_Droid_Company, B2_Droid_Company_CIS, Shielded_B2_Droid_Company, B3_Squad, CB3_Squad, BX_Commando_Company, CIS_STAP_Company, Crab_Droid_Company, Dwarf_Spider_Droid_Company_CIS, OG9_Company, HMP_Company, HAML_Company, CIS_Defoliator_Company1, HMP2_Company</Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.20</Price_Reduction_Percentage>
+				<Stacking_Category>50</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="Baktoid_Production_Time_Bonus">
+				<Applicable_Unit_Categories/>
+				<Applicable_Unit_Types>  CIS_AAT_Company, J1_Cannon_Company, HAG_Company_CIS, MTT_CIS_Support_Company, CIS_MTT_Company, CIS_Super_Tank_Company, B1_Droid_Company, B2_Droid_Company_CIS, Shielded_B2_Droid_Company, B3_Squad, CB3_Squad, BX_Commando_Company, CIS_STAP_Company, Crab_Droid_Company, Dwarf_Spider_Droid_Company_CIS, OG9_Company, HMP_Company, HAML_Company, CIS_Defoliator_Company1, HMP2_Company</Applicable_Unit_Types>
+				<Time_Reduction_Percentage>0.20</Time_Reduction_Percentage>
+				<Stacking_Category>50</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</SpecialStructure>
+	
 </Ground_Structures>

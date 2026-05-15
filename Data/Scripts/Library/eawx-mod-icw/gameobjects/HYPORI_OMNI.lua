@@ -1,3 +1,3 @@
 return {
-	Flags = {FULLINHERIT = "DH_OMNI"}
+	Scripts = {"multilayer"}
 }
