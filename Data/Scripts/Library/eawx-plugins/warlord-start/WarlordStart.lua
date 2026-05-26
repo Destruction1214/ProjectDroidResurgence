@@ -266,6 +266,10 @@ function WarlordStart:Populate_Chosen_Faction(choice, cosmetic)
 			end
 		end
 	end
+	
+	if entry.StoryEvent then
+		Story_Event(entry.StoryEvent)
+	end
 	--/
 
 	if entry.FighterHero then
