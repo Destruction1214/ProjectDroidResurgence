@@ -549,11 +549,12 @@ return {
 				"Raider_I_Corvette", "Charger_C70", "CR92A", "Lancer_Frigate", "Marauder_Cruiser", "Carrack_Cruiser", "Ton_Falk_Escort_Carrier", "Star_Galleon", "Strike_Cruiser", "Eidolon",
 				"Imperial_Proteus_Capital", "Imperial_Proteus_Office", "I_Ground_Barracks", "I_Ground_Light_Vehicle_Factory", "I_Ground_Heavy_Vehicle_Factory", "I_Ground_Advanced_Vehicle_Factory", "Imperial_Proteus_Shipyard_Level_One", "Imperial_Proteus_Shipyard_Level_Two", "Imperial_Proteus_Shipyard_Level_Three", "Imperial_Proteus_Shipyard_Level_Four", "Baktoid_HQ"
 			},
-			IntroText = {"TEXT_CONQUEST_CIS_REMNANTS"},
-			IntroHolo = "",
+			IntroText = {""},--{"TEXT_CONQUEST_CIS_REMNANTS"},
+			IntroHolo = "Grievous_Loop",
 			PlanetParticle = "CIS_Allies",
 			SwapStructures = {"Imperial_Proteus_Capital", "Imperial_Proteus_Office", "I_Ground_Barracks", "I_Ground_Light_Vehicle_Factory", "I_Ground_Heavy_Vehicle_Factory", "I_Ground_Advanced_Vehicle_Factory", "Imperial_Proteus_Shipyard_Level_One", "Imperial_Proteus_Shipyard_Level_Two", "Imperial_Proteus_Shipyard_Level_Three", "Imperial_Proteus_Shipyard_Level_Four"},
 			ShipyardCapitalOverride = "CIS_Space_Capital",
-			StoryEvent = "",
+			StoryEvent = "CIS_REMNANTS_START",
+			CustomRewards = true,
 		},
 }

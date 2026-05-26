@@ -5,6 +5,9 @@ TEXT_BX_COMMANDO_COMPANY,BX Commando Droid Platoon
 TEXT_BX_COMMANDO_SNIPER_SQUAD,BX Commando Droid Sniper Squad
 TEXT_BX_COMMANDO_SQUAD,BX Commando Droid Squad
 TEXT_BX_COMMANDO_WEAPONS_SQUAD,BX Commando Droid Weapons Squad
+TEXT_CAMPAIGN_EVENT_CISR_FORMERPLANETS,Scattered throughout the galaxy are multiple holdouts. By conquering the planet, you will gain acces to new heroes and units.
+TEXT_CAMPAIGN_EVENT_CISR_GOLIATH,As the Remnants of the Separatist Alliance, you will have the option to upgrade your capital by completing missions. Your capital, the Lucrehulk Goliath, will give you access to different assets for your conquest - including new research and increased production capabilities.
+TEXT_CAMPAIGN_EVENT_CISR_REMNANTSGROUPS,By reconquering former CIS planets, you will be able to regain access to blueprints of separatist droids and ships, allowing you to restart their production.
 TEXT_CHAMELEON_DROID,Chameleon Droid
 TEXT_CHAMELEON_DROID_COMPANY,Chameleon Droid Company
 TEXT_CHAMELEON_DROID_SQUAD,Chameleon Droid Squad
@@ -18,7 +21,8 @@ TEXT_COMPANY_GARRISON_BIG_BAKTOID1,OOM Security Droid Squad: 4 / 10
 TEXT_COMPANY_GARRISON_BIG_BAKTOID2,AAT: 2 / 2
 TEXT_COMPANY_GARRISON_BIG_BAKTOID3,B3 Ultra Battle Droid Squad: 1 / 1
 TEXT_COMPANY_SMALL_BAKTOID,Baktoid Armor Workshop Subsidiary
-TEXT_CONQUEST_CIS_REMNANTS, --intro speech--
+TEXT_CONQUEST_CIS_REMNANTS,
+TEXT_CONQUEST_WARLORDS_CISR_INTRO,Hypori: We have long waited for the right time to carry out General Grievous' last order. Now is our moment to strike out against our enemies! Prepare the fleet!
 TEXT_COYOTE_BOMBER_SQUADRON,Coyote Advanced Droid Bomber Squadron
 TEXT_COYOTE_BOMBER_SQUADRON_HALF,Coyote Advanced Droid Bomber Squadron 1/2
 TEXT_COYOTE_BOMBER_SQUADRON2,Coyote Advanced Droid Bomber Squadron x2
@@ -87,7 +91,7 @@ TEXT_PLANET_INFO_LOLA_SAYU_POPULATION,Immigrated: Human | Other
 TEXT_PORAX_SQUADRON,Porax-38 Starfighter Squadron
 TEXT_PORAX_SQUADRON_HALF,Porax-38 Starfighter Squadron 1/2
 TEXT_PORAX_SQUADRON2,Porax-38 Starfighter Squadron x2
-TEXT_PROTEUS_DESCRIPTION_CIS_REMNANTS, --desc in select menu--
+TEXT_PROTEUS_DESCRIPTION_CIS_REMNANTS,The old gears of the CIS are turning again! Fight your way through a galaxy full of enemies, gather old and new allies on former Separatist planets, upgrade outdated technology and get the Baktoid Armor Workshop Market back online! Your capital is the Lucrehulk dockship the Goliath, which you can improve and upgrade over time.
 TEXT_REPAIR_DROID_SQUAD,Repair Droid Squad
 TEXT_STATBLOCK_ADVANCED_ESTAP_BASE,Health: 11 | Shields: 4
 TEXT_STATBLOCK_ADVANCED_ESTAP_MOVE,Speed: 5.57 | Maneuverability: 4.65
@@ -138,6 +142,7 @@ TEXT_STATBLOCK_VULTURE_SQUADRON_HALF,Squadron: 12x Vulture Droid-I
 TEXT_STATBLOCK_VULTURE_WEAP1,1x Fighter Laser Cannon: 4 / 3.0s / 1.0km
 TEXT_STATBLOCK_VULTURE_WEAP2,1x Fighter Concussion Missile: 1 / 75.0s / 1.8km
 TEXT_STATBLOCK_XANADU_WEAP1,1x Fighter Laser Cannon: 4 / 1.3s / 2.0km
+TEXT_STORY_TRANSMISSION_CISR,Incoming Transmission from Hypori
 TEXT_TOOLTIP_A_FACTORY_CIS_1,Multi-Troop Transport: 1 / 1
 TEXT_TOOLTIP_AAT_COMPANY,Company: 3x AAT-1
 TEXT_TOOLTIP_ADVANCED_ESTAP,The most refined form of an outdated Trade Federation starbomber. In contrast to other droid bomber craft, the E-STAP Series is very well armed even compared to piloted bombers of the time, but presents a much slower target in comparison. Incorporates additional secondary weapons and heftier protection when compared with previous models.
@@ -638,3 +643,14 @@ TEXT_UNIT_VULTURE_DROID,Vulture Droid Mark 1
 TEXT_VULTURE_SQUADRON,Vulture Droid-I Squadron
 TEXT_VULTURE_SQUADRON_HALF,Vulture Droid-I Squadron 1/2
 TEXT_VULTURE_SQUADRON2,Vulture Droid-I Squadron x2
+TEXT_UNIT_OOM_SECURITY,B1 Security Battle Droid
+TEXT_UNIT_OOM_SECURITY_PLATOON,B1 Security Battle Droid Platoon
+TEXT_UNIT_OOM_SECURITY_SQUAD,B1 Security Battle Droid Squad
+TEXT_UNIT_BATTLEDROID_MARINE,B1 Battle Droid Marine
+TEXT_UNIT_BATTLEDROID_MARINE_AT_HEAVY,B1 Battle Droid Marine Heavy AT
+TEXT_UNIT_BATTLEDROID_MARINE_GRENADIER,B1 Battle Droid Marine Grenadier
+TEXT_UNIT_BATTLE_DROID_MARINE_PLATOON,B1 Battle Droid Marine Platoon
+TEXT_UNIT_BATTLE_DROID_MARINE_SQUAD,B1 Battle Droid Marine Squad
+TEXT_UNIT_BATTLEDROID_GRENADE,B1 Battle Droid Grenadier
+TEXT_UNIT_BATTLEDROID_GUNNER_LIGHT,B1 Battle Droid Light Gunner
+TEXT_UNIT_BATTLEDROID_AT_LIGHT,B1 Battle Droid Light AT

@@ -28,6 +28,9 @@ function BuildStructuresGroundMission:new(gc, player)
 	self.CountCurrent = 0
 	self.CountTarget = 0
 	self.BuildList = nil
+	--ProDR
+	self.ProteusLibrary = require("ProteusWarlordLibrary")
+	--/
 
 	self.production_finished_event = gc.Events.GalacticProductionFinished
 	self.production_finished_event:attach_listener(self.on_construction_finished, self)
@@ -56,6 +59,18 @@ function BuildStructuresGroundMission:Begin(reward_group, week_start)
 	self.RewardGroupTable = reward_group
 	self.Dialog = "DIALOG_INTERVENTION_MASTERFILE_"..self.RewardGroupTable.DialogName
 
+	--ProDr
+	local group = GlobalValue.Get("PROTEUS_GROUP_NAME")
+	if group ~= nil then
+		if self.ProteusLibrary[group].LeaderTable[1] == "NO_LEGITIMACY" then
+			self.RewardGroupTable.GroupSupport = nil
+		end
+		if self.ProteusLibrary[group].CustomMissionDialog then
+			self.Dialog = "DIALOG_INTERVENTION_MASTERFILE_"..group
+		end
+	end
+	--/
+
 	self.TimerStart = week_start
 	self.TimeActive = GameRandom.Free_Random(7, 13)
 	self.EndTime = self.TimerStart + self.TimeActive
@@ -67,10 +82,9 @@ function BuildStructuresGroundMission:Begin(reward_group, week_start)
 
 	MasterBuildingTable = require("eawx-plugins/intervention-missions/build-options/BuildOptionTables_"..self.player.Get_Faction_Name())
 	--ProDR
-	-- local proteus = GlobalValue.Get("PROTEUS_GROUP_NAME")
-	-- if proteus == "CIS_REMNANTS" then
-	-- 	MasterBuildingTable = require("eawx-plugins/intervention-missions/build-options/BuildOptionTables_"..proteus)
-	-- end
+	if group == "CIS_REMNANTS" then
+		MasterBuildingTable = require("eawx-plugins/intervention-missions/build-options/BuildOptionTables_"..group)
+	end
 	--/
 	if self.RewardGroupTable.GroupSupport then
 		local build_list_group = self.BuildList.."_"..self.RewardGroupTable.GroupSupport
