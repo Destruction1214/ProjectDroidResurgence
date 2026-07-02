@@ -98,7 +98,6 @@ function DefineRosterOverride(planet)
 		KUAT = "KDY",
 		XA_FEL = "KDY",
 		RZ7 = "HARDLINERS",
-		HYPORI = "ZANN_CONSORTIUM",
 		SALEUCAMI = "ZANN_CONSORTIUM",
 		FELUCIA = "ZANN_CONSORTIUM",
 		RYLOTH = "ZANN_CONSORTIUM",
