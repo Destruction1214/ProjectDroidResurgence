@@ -270,6 +270,10 @@ function WarlordStart:Populate_Chosen_Faction(choice, cosmetic)
 	if entry.StoryEvent then
 		Story_Event(entry.StoryEvent)
 	end
+
+	if entry.Market then
+		crossplot:publish("PROTEUS_MARKET")
+	end
 	--/
 
 	if entry.FighterHero then
