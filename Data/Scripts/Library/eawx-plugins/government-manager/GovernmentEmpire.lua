@@ -253,6 +253,25 @@ function GovernmentEmpire:new(gc, absorb, dark_empire_available, id)
 
     self.Events = {}
     self.Events.FactionIntegrated = Observable()
+
+    --ProDR
+    self.baw_updates = {
+        ["DUMMY_LIGHT_B1_ADD_LICENSE"] = "B1_LIGHT",
+        ["DUMMY_MTM_ADD_LICENSE"] = "MTM",
+        ["DUMMY_CB3_ADD_LICENSE"] = "CB3",
+        ["DUMMY_DEFOLIATOR_ADD_LICENSE"] = "DEFOLIATOR",
+        ["DUMMY_DESTROYER_II_ADD_LICENSE"] = "DESTROYER_II",
+        ["DUMMY_SUBJUGATOR_ADD_LICENSE"] = "SUBJUGATOR",
+        ["DUMMY_SUPER_TANK_ADD_LICENSE"] = "SUPER_TANK",
+        ["DUMMY_SCORPENEK_ADD_LICENSE"] = "SCORPONEK",
+        ["DUMMY_MAGNATRI_MISSILE_ADD_LICENSE"] = "MAGNATRI",
+        ["DUMMY_LUCREHULK_ADD_LICENSE"] = "LUCREHULK",
+        ["DUMMY_RECUSANT_DREADNOUGHT_ADD_LICENSE"] = "RECUSANT_D",
+        ["DUMMY_PROVIDENCE_DREADNOUGHT_ADD_LICENSE"] = "PROVIDENCE_D",
+        ["DUMMY_SPY_BX_ADD_LICENSE"] = "BX_SPY",
+        ["DUMMY_CHAMELEON_ADD_LICENSE"] = "CHAMELEON"
+    }
+    --/
 end
 
 
@@ -705,68 +724,20 @@ function GovernmentEmpire:check_for_integration(old_owner_name)
     self.imperial_table[old_owner_name].pending_integration = true
 end
 
---ProDR
-local license_map = {
-    ["DUMMY_LIGHT_B1_ADD_LICENSE"] = {
-        {"IMPERIAL_PROTEUS","CIS_MARKET","DROID_COMPANY_LIGHT",45}
-    },
-    ["DUMMY_MTM_ADD_LICENSE"] = {
-        {"IMPERIAL_PROTEUS","CIS_MARKET","MTT_CIS_SUPPORT_COMPANY",27}
-    },
-    ["DUMMY_CB3_ADD_LICENSE"] = {
-        {"IMPERIAL_PROTEUS","CIS_MARKET","CB3_SQUAD",20}
-    },
-    ["DUMMY_DEFOLIATOR_ADD_LICENSE"] = {
-        {"IMPERIAL_PROTEUS","CIS_MARKET","CIS_DEFOLIATOR_COMPANY1",30}
-    },
-    ["DUMMY_DESTROYER_II_ADD_LICENSE"] = {
-        {"IMPERIAL_PROTEUS","CIS_MARKET","DESTROYER_DROID_II_HUNTER_COMPANY_CIS",20},
-        {"IMPERIAL_PROTEUS","CIS_MARKET","DESTROYER_DROID_II_TURRET_COMPANY_CIS",20}
-    },
-	["DUMMY_SUBJUGATOR_ADD_LICENSE"] = {
-        {"IMPERIAL_PROTEUS","CIS_MARKET","SUBJUGATOR",20}
-    },
-	["DUMMY_SUPER_TANK_ADD_LICENSE"] = {
-        {"IMPERIAL_PROTEUS","CIS_MARKET","CIS_SUPER_TANK_COMPANY",30}
-    },
-	["DUMMY_SCORPENEK_ADD_LICENSE"] = {
-        {"IMPERIAL_PROTEUS","CIS_MARKET","SCORPENEK_SENTRY_COMPANY_CIS",20},
-        {"IMPERIAL_PROTEUS","CIS_MARKET","SCORPENEK_UTILITY_COMPANY_CIS",20}
-    },
-	["DUMMY_MAGNATRI_MISSILE_ADD_LICENSE"] = {
-        {"IMPERIAL_PROTEUS","CIS_MARKET","MAGNA_OCTUPTARRA_MISSILE_COMPANY",30}
-    },
-	["DUMMY_LUCREHULK_ADD_LICENSE"] = {
-        {"IMPERIAL_PROTEUS","CIS_MARKET","LUCREHULK_CARRIER_CONTROL_CIS",25},
-        {"IMPERIAL_PROTEUS","CIS_MARKET","LUCREHULK_BATTLESHIP_CIS",25}
-    },
-	["DUMMY_RECUSANT_DREADNOUGHT_ADD_LICENSE"] = {
-        {"IMPERIAL_PROTEUS","CIS_MARKET","RECUSANT_DREADNOUGHT",28}
-    },
-	["DUMMY_PROVIDENCE_DREADNOUGHT_ADD_LICENSE"] = {
-        {"IMPERIAL_PROTEUS","CIS_MARKET","PROVIDENCE_DREADNOUGHT",20}
-    },
-	["DUMMY_SPY_BX_ADD_LICENSE"] = {
-        {"IMPERIAL_PROTEUS","CIS_MARKET","BX_COMMANDO_SPY_COMPANY",30}
-    },
-	["DUMMY_CHAMELEON_ADD_LICENSE"] = {
-        {"IMPERIAL_PROTEUS","CIS_MARKET","CHAMELEON_DROID_COMPANY",25}
-    }
-}
---/
 
 function GovernmentEmpire:on_production_finished(planet, game_object_type_name)
     --Logger:trace("entering GovernmentEmpire:on_production_finished")
     if game_object_type_name == "DUMMY_RECRUIT_GROUP_TAGGE_CSA" then
         self:tagge_handler(planet, game_object_type_name)
     end
-
-    local entries = license_map[game_object_type_name]
-    if not entries then 
-        return
+    
+    --ProDR
+    for license, event in pairs(self.baw_updates) do
+        if game_object_type_name == license then
+            crossplot:publish("UPDATE_MARKET", event)
+        end
     end
-
-    crossplot:publish("ADJUST_MARKET_CHANCE", entries)
+    --/
 end
 
 function GovernmentEmpire:tagge_handler(planet, game_object_type_name)
@@ -1082,11 +1053,20 @@ function GovernmentEmpire:faction_display_name_change(player_name, new_display_n
     end
 end
 
-function GovernmentEmpire:UpdateDisplay()
+function GovernmentEmpire:UpdateDisplay(market_name, unit_list)
     --Logger:trace("entering GovernmentEmpire:UpdateDisplay")
     if self.human_is_imperial ~= true then
         return
     end
+
+    --ProDR
+    if market_name == nil then
+        market_name = ""
+    end
+    if unit_list == nil then
+        unit_list = {}
+    end
+    --/
 
     local plot = Get_Story_Plot("Conquests\\Player_Agnostic_Plot.xml")
     local government_display_event = plot.Get_Event("Government_Display")
@@ -1095,211 +1075,253 @@ function GovernmentEmpire:UpdateDisplay()
 
     government_display_event.Set_Reward_Parameter(1, self.PlayerHuman.Get_Faction_Name())
 
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_HEADER")
-    government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
-    for i,faction_name in ipairs(SortKeysByElement(self.imperial_table,"legitimacy","desc")) do
-        if self.imperial_table[faction_name].controls_planets == true then
-            government_display_event.Add_Dialog_Text(
-                "%s".. ": "..tostring(self.imperial_table[faction_name].legitimacy).." ("..tostring(self.imperial_table[faction_name].percentile_legitimacy).."%%)",
-                CONSTANTS.ALL_FACTION_TEXTS[string.upper(faction_name)]
-            )
-            if self:faction_has_living_leaders(faction_name) then
-                government_display_event.Add_Dialog_Text("TEXT_NONE")
-                government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LIVING_LEADERS")
-                faction_player = Find_Player(faction_name)
-                --SSD heroes
-                for hero_ssd, hero_ssd_text in pairs(self.hero_ssd_table) do
-                    if Find_First_Object(hero_ssd) then
-                        if Find_First_Object(hero_ssd).Get_Owner() == faction_player then
-                            government_display_event.Add_Dialog_Text(hero_ssd_text)
-                        end
-                    end
-                end
-                --Non-SSD leaders & warlords
-                for leader_key, leader_value in pairs(self.leader_table) do
-                    if type(leader_value) ~= "table" then
-                        if Find_First_Object(leader_value) then
-                            if Find_First_Object(leader_value).Get_Owner() == faction_player then
-                                government_display_event.Add_Dialog_Text("%s",Find_Object_Type(leader_value))
-                            end
-                        end
-                    elseif not self:check_leader_dead(leader_key) then
-                        if Find_First_Object(leader_value[1]) then
-                            if Find_First_Object(leader_value[1]).Get_Owner() == faction_player then
-                                government_display_event.Add_Dialog_Text("%s",Find_Object_Type(leader_value[1]))
-                            end
-                        end
-                    end
-                end
-                --Generic SSDs
-                for unit, _ in pairs(self.Unit_List[1]) do
-                    if Find_First_Object(unit) then
-                        if Find_First_Object(unit).Get_Owner() == faction_player then
-                            if not self.hero_ssd_table[unit] then
-                                government_display_event.Add_Dialog_Text("%s",Find_Object_Type(unit))
-                            end
-                        end
-                    end
-                end
+    --ProDr
+    if GlobalValue.Get("PROTEUS_GROUP_NAME") == "CIS_REMNANTS" then
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_CIS_BAKTOID_ARMOR_WORKSHOP_OVERVIEW_HEADER")
+        government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_CIS_BAKTOID_ARMOR_WORKSHOP_OVERVIEW")
+        government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+        government_display_event.Add_Dialog_Text("TEXT_NONE")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_CIS_BAKTOID_ARMOR_WORKSHOP_LIST_01")
+        for i, unit in ipairs(SortKeysByElement(unit_list,"order","asc")) do
+            local unit_data = unit_list[unit]
+            if unit_data.locked == false and unit_data.gc_locked == false then
+                government_display_event.Add_Dialog_Text(unit_data.readable_name .. ": "..tostring(unit_data.amount) .." - [ ".. tostring(unit_data.chance/10) .."%% ] ")
+            elseif unit_data.amount > 0 then
+                government_display_event.Add_Dialog_Text(unit_data.readable_name .. ": "..tostring(unit_data.amount) .." - [ Additional batches of this specialization will not be made available ] ")
             end
-            if self.imperial_table[faction_name].destruction_unlock_descs[1] ~= nil then
-                government_display_event.Add_Dialog_Text("TEXT_NONE")
-                government_display_event.Add_Dialog_Text("Integration Rewards:")
-                for _, desc in pairs(self.imperial_table[faction_name].destruction_unlock_descs) do
-                    government_display_event.Add_Dialog_Text(desc)
-                end
-            end
-            if self.imperial_table[faction_name].factions_integrated ~= 0 then
-                government_display_event.Add_Dialog_Text("TEXT_NONE")
-                government_display_event.Add_Dialog_Text("Factions Integrated: " .. tostring(self.imperial_table[faction_name].factions_integrated))
-            end
-            if self.imperial_table[faction_name].joined_groups[1] ~= nil then
-                government_display_event.Add_Dialog_Text("TEXT_NONE")
-                government_display_event.Add_Dialog_Text("Minor Groups Integrated:")
-                for _, name in pairs(self.imperial_table[faction_name].joined_groups) do
-                    government_display_event.Add_Dialog_Text("%s",Find_Object_Type(name))
-                end
-            end
-
-            government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
         end
-    end
 
-    government_display_event.Add_Dialog_Text("TEXT_NONE")
-
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_HEADER")
-    government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DESCRIPTION")
-
-    government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_MOD_HEADER")
-    government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_BASE")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_MOD_CONQUEST")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_MOD_MISSION")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_MOD_PLUS3")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_MOD_PLUS5")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_MOD_PLUS10")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_MOD_DEAD_HERO")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_MOD_DEAD_LEADER")
-
-    government_display_event.Add_Dialog_Text("TEXT_NONE")
-
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_INTEGRATION_HEADER")
-    government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_INTEGRATION_DESCRIPTION", self.LegitimacyAbsorb)
-
-    government_display_event.Add_Dialog_Text("TEXT_NONE")
-
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_HEADER")
-    government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_DESCRIPTION")
-    government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
-    government_display_event.Add_Dialog_Text("Requirements:")
-    government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
-
-    if self.DarkEmpireAvailable then
-        if self.DarkEmpirePlanetBasedOnly == false then
-            government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REQUIREMENT_1")
-            government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REQUIREMENT_2", self.DarkEmpireRequireIntegrations)
-        else
-            government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REQUIREMENT_2", self.DarkEmpireRequireIntegrations)
+        government_display_event.Add_Dialog_Text("TEXT_NONE")
+        government_display_event.Add_Dialog_Text("Currently Unavailable:")
+        for i, unit in ipairs(SortKeysByElement(unit_list,"order","asc")) do
+            local unit_data = unit_list[unit]
+            if unit_data.amount == 0 and unit_data.locked == true and unit_data.gc_locked == false then
+                government_display_event.Add_Dialog_Text(unit_data.readable_name .." - "..unit_data.text_requirement)
+            end
         end
-    else
-        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_UNAVAILABLE")
-    end
-
-    government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_HEADER")
-    government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
-
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_1")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_2")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_3")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_4")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_5")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_6")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_7")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_8")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_9")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_10")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_11")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_12")
-
-    government_display_event.Add_Dialog_Text("TEXT_NONE")
-
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_CRIMSON_EMPIRE_REWARD_HEADER")
-    government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
-
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_CRIMSON_EMPIRE_REWARD_REWARD_1")
-
-    government_display_event.Add_Dialog_Text("TEXT_NONE")
-
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_REUNIFICATION_REWARD_HEADER")
-    government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
-
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_REUNIFICATION_REWARD_REWARD_1")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_REUNIFICATION_REWARD_REWARD_2")
-
-    government_display_event.Add_Dialog_Text("TEXT_NONE")
-
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_FINAL_IMPERIAL_PUSH_REWARD_HEADER")
-    government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
-
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_FINAL_IMPERIAL_PUSH_REWARD_REWARD_1")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_FINAL_IMPERIAL_PUSH_REWARD_REWARD_2")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_FINAL_IMPERIAL_PUSH_REWARD_REWARD_3")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_FINAL_IMPERIAL_PUSH_REWARD_REWARD_4")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_FINAL_IMPERIAL_PUSH_REWARD_REWARD_5")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_FINAL_IMPERIAL_PUSH_REWARD_REWARD_6")
-
-    government_display_event.Add_Dialog_Text("TEXT_NONE")
-
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_EVENTS")
-    government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
-
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_EVENTS_REBORN_EMPIRE_REWARD_HEADER")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_EVENTS_REBORN_EMPIRE_REWARD_REWARD_1")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_EVENTS_REBORN_EMPIRE_REWARD_REWARD_2")
-
-    government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
-
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_EVENTS_DISCIPLES_OF_RAGNOS_REWARD_HEADER")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_EVENTS_DISCIPLES_OF_RAGNOS_REWARD_REWARD_1")
-
-    government_display_event.Add_Dialog_Text("TEXT_NONE")
-
-    government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_REWARD_LIST")
-    government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
-
-    for index=table.getn(self.legitimacy_documentation),1,-1 do
-        local reversed = table.getn(self.legitimacy_documentation) + 1 - index
-        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_TIER_" .. reversed)
-        for i, entry in pairs(self.legitimacy_documentation[index]) do
-            government_display_event.Add_Dialog_Text(entry.name .. entry.state)
-            if entry.documentation == nil then
-                StoryUtil.ShowScreenText(entry.name .. " is missing documentation", 15)
-            else
-                for j, doc in pairs(entry.documentation) do
-                    government_display_event.Add_Dialog_Text(doc)
-                end
+        government_display_event.Add_Dialog_Text("TEXT_NONE")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_CSA_LIST_MODIFIERS")
+        for i, unit in ipairs(SortKeysByElement(unit_list,"order","asc")) do
+            local unit_data = unit_list[unit]
+            if string.len(unit_data.text_requirement) ~= 0 and not string.find(unit_data.text_requirement, " Requires ") then
+                government_display_event.Add_Dialog_Text(unit_data.readable_name ..": ".. unit_data.text_requirement)
             end
         end
         government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
-    end
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_TIER_SPECIAL")
-    if self.imperial_table["ZSINJ_EMPIRE"].zann_unlocked then
-        government_display_event.Add_Dialog_Text("=== Zann Consortium === / [ Zsinj's Empire ]")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_CIS_BAKTOID_ARMOR_WORKSHOP_OVERVIEW2")
+        government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+        government_display_event.Add_Dialog_Text("TEXT_COMPANY_BAKTOID")
+        government_display_event.Add_Dialog_Text("TEXT_COMPANY_BAKTOID_SMALL")
+        government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+    --/
     else
-        government_display_event.Add_Dialog_Text("=== Zann Consortium === / [ Zsinj's Empire-only ]")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_HEADER")
+        government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+        for i,faction_name in ipairs(SortKeysByElement(self.imperial_table,"legitimacy","desc")) do
+            if self.imperial_table[faction_name].controls_planets == true then
+                government_display_event.Add_Dialog_Text(
+                    "%s".. ": "..tostring(self.imperial_table[faction_name].legitimacy).." ("..tostring(self.imperial_table[faction_name].percentile_legitimacy).."%%)",
+                    CONSTANTS.ALL_FACTION_TEXTS[string.upper(faction_name)]
+                )
+                if self:faction_has_living_leaders(faction_name) then
+                    government_display_event.Add_Dialog_Text("TEXT_NONE")
+                    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LIVING_LEADERS")
+                    faction_player = Find_Player(faction_name)
+                    --SSD heroes
+                    for hero_ssd, hero_ssd_text in pairs(self.hero_ssd_table) do
+                        if Find_First_Object(hero_ssd) then
+                            if Find_First_Object(hero_ssd).Get_Owner() == faction_player then
+                                government_display_event.Add_Dialog_Text(hero_ssd_text)
+                            end
+                        end
+                    end
+                    --Non-SSD leaders & warlords
+                    for leader_key, leader_value in pairs(self.leader_table) do
+                        if type(leader_value) ~= "table" then
+                            if Find_First_Object(leader_value) then
+                                if Find_First_Object(leader_value).Get_Owner() == faction_player then
+                                    government_display_event.Add_Dialog_Text("%s",Find_Object_Type(leader_value))
+                                end
+                            end
+                        elseif not self:check_leader_dead(leader_key) then
+                            if Find_First_Object(leader_value[1]) then
+                                if Find_First_Object(leader_value[1]).Get_Owner() == faction_player then
+                                    government_display_event.Add_Dialog_Text("%s",Find_Object_Type(leader_value[1]))
+                                end
+                            end
+                        end
+                    end
+                    --Generic SSDs
+                    for unit, _ in pairs(self.Unit_List[1]) do
+                        if Find_First_Object(unit) then
+                            if Find_First_Object(unit).Get_Owner() == faction_player then
+                                if not self.hero_ssd_table[unit] then
+                                    government_display_event.Add_Dialog_Text("%s",Find_Object_Type(unit))
+                                end
+                            end
+                        end
+                    end
+                end
+                if self.imperial_table[faction_name].destruction_unlock_descs[1] ~= nil then
+                    government_display_event.Add_Dialog_Text("TEXT_NONE")
+                    government_display_event.Add_Dialog_Text("Integration Rewards:")
+                    for _, desc in pairs(self.imperial_table[faction_name].destruction_unlock_descs) do
+                        government_display_event.Add_Dialog_Text(desc)
+                    end
+                end
+                if self.imperial_table[faction_name].factions_integrated ~= 0 then
+                    government_display_event.Add_Dialog_Text("TEXT_NONE")
+                    government_display_event.Add_Dialog_Text("Factions Integrated: " .. tostring(self.imperial_table[faction_name].factions_integrated))
+                end
+                if self.imperial_table[faction_name].joined_groups[1] ~= nil then
+                    government_display_event.Add_Dialog_Text("TEXT_NONE")
+                    government_display_event.Add_Dialog_Text("Minor Groups Integrated:")
+                    for _, name in pairs(self.imperial_table[faction_name].joined_groups) do
+                        government_display_event.Add_Dialog_Text("%s",Find_Object_Type(name))
+                    end
+                end
+
+                government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+            end
+        end
+
+        government_display_event.Add_Dialog_Text("TEXT_NONE")
+
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_HEADER")
+        government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DESCRIPTION")
+
+        government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_MOD_HEADER")
+        government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_BASE")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_MOD_CONQUEST")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_MOD_MISSION")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_MOD_PLUS3")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_MOD_PLUS5")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_MOD_PLUS10")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_MOD_DEAD_HERO")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_MOD_DEAD_LEADER")
+
+        government_display_event.Add_Dialog_Text("TEXT_NONE")
+
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_INTEGRATION_HEADER")
+        government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_INTEGRATION_DESCRIPTION", self.LegitimacyAbsorb)
+
+        government_display_event.Add_Dialog_Text("TEXT_NONE")
+
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_HEADER")
+        government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_DESCRIPTION")
+        government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+        government_display_event.Add_Dialog_Text("Requirements:")
+        government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+
+        if self.DarkEmpireAvailable then
+            if self.DarkEmpirePlanetBasedOnly == false then
+                government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REQUIREMENT_1")
+                government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REQUIREMENT_2", self.DarkEmpireRequireIntegrations)
+            else
+                government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REQUIREMENT_2", self.DarkEmpireRequireIntegrations)
+            end
+        else
+            government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_UNAVAILABLE")
+        end
+
+        government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_HEADER")
+        government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_1")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_2")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_3")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_4")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_5")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_6")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_7")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_8")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_9")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_10")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_11")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_DARKEMPIRE_REWARD_12")
+
+        government_display_event.Add_Dialog_Text("TEXT_NONE")
+
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_CRIMSON_EMPIRE_REWARD_HEADER")
+        government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_CRIMSON_EMPIRE_REWARD_REWARD_1")
+
+        government_display_event.Add_Dialog_Text("TEXT_NONE")
+
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_REUNIFICATION_REWARD_HEADER")
+        government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_REUNIFICATION_REWARD_REWARD_1")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_REUNIFICATION_REWARD_REWARD_2")
+
+        government_display_event.Add_Dialog_Text("TEXT_NONE")
+
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_FINAL_IMPERIAL_PUSH_REWARD_HEADER")
+        government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_FINAL_IMPERIAL_PUSH_REWARD_REWARD_1")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_FINAL_IMPERIAL_PUSH_REWARD_REWARD_2")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_FINAL_IMPERIAL_PUSH_REWARD_REWARD_3")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_FINAL_IMPERIAL_PUSH_REWARD_REWARD_4")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_FINAL_IMPERIAL_PUSH_REWARD_REWARD_5")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_FINAL_IMPERIAL_PUSH_REWARD_REWARD_6")
+
+        government_display_event.Add_Dialog_Text("TEXT_NONE")
+
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_EVENTS")
+        government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_EVENTS_REBORN_EMPIRE_REWARD_HEADER")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_EVENTS_REBORN_EMPIRE_REWARD_REWARD_1")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_EVENTS_REBORN_EMPIRE_REWARD_REWARD_2")
+
+        government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_EVENTS_DISCIPLES_OF_RAGNOS_REWARD_HEADER")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_LEGITIMACY_EVENTS_DISCIPLES_OF_RAGNOS_REWARD_REWARD_1")
+
+        government_display_event.Add_Dialog_Text("TEXT_NONE")
+
+        government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_REWARD_LIST")
+        government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+
+        for index=table.getn(self.legitimacy_documentation),1,-1 do
+            local reversed = table.getn(self.legitimacy_documentation) + 1 - index
+            government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_TIER_" .. reversed)
+            for i, entry in pairs(self.legitimacy_documentation[index]) do
+                government_display_event.Add_Dialog_Text(entry.name .. entry.state)
+                if entry.documentation == nil then
+                    StoryUtil.ShowScreenText(entry.name .. " is missing documentation", 15)
+                else
+                    for j, doc in pairs(entry.documentation) do
+                        government_display_event.Add_Dialog_Text(doc)
+                    end
+                end
+            end
+            government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+        end
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_TIER_SPECIAL")
+        if self.imperial_table["ZSINJ_EMPIRE"].zann_unlocked then
+            government_display_event.Add_Dialog_Text("=== Zann Consortium === / [ Zsinj's Empire ]")
+        else
+            government_display_event.Add_Dialog_Text("=== Zann Consortium === / [ Zsinj's Empire-only ]")
+        end
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_TIER_SPECIAL_REWARD_1")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_TIER_SPECIAL_REWARD_2")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_TIER_SPECIAL_REWARD_3")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_TIER_SPECIAL_REWARD_4")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_TIER_SPECIAL_REWARD_5")
+        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_TIER_SPECIAL_REWARD_6")
     end
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_TIER_SPECIAL_REWARD_1")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_TIER_SPECIAL_REWARD_2")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_TIER_SPECIAL_REWARD_3")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_TIER_SPECIAL_REWARD_4")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_TIER_SPECIAL_REWARD_5")
-    government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_TIER_SPECIAL_REWARD_6")
 
     Story_Event("GOVERNMENT_DISPLAY")
 end

@@ -554,7 +554,8 @@ return {
 			PlanetParticle = "CIS_Allies",
 			SwapStructures = {"Imperial_Proteus_Capital", "Imperial_Proteus_Office", "I_Ground_Barracks", "I_Ground_Light_Vehicle_Factory", "I_Ground_Heavy_Vehicle_Factory", "I_Ground_Advanced_Vehicle_Factory", "Imperial_Proteus_Shipyard_Level_One", "Imperial_Proteus_Shipyard_Level_Two", "Imperial_Proteus_Shipyard_Level_Three", "Imperial_Proteus_Shipyard_Level_Four"},
 			ShipyardCapitalOverride = "CIS_Space_Capital",
-			StoryEvent = "CIS_REMNANTS_START",
+			--StoryEvent = "CIS_REMNANTS_START",
 			CustomRewards = true,
+			Market = true,
 		},
 }
