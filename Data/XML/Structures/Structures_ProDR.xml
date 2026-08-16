@@ -28,7 +28,7 @@
 		TEXT_TOOLTIP_BUILDLIMIT_CAPITAL
 		</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FACTION_CAPITAL_STATION</Encyclopedia_Unit_Class>
-		<Space_Model_Name>lucrehulk_control_cship.alo</Space_Model_Name>
+		<Space_Model_Name>goliath.alo</Space_Model_Name>
 		<Icon_Name>I_BUTTON_LUCREHULK_GOLIATH.TGA</Icon_Name>
 		
 		<GUI_Row> 0 </GUI_Row>

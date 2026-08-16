@@ -40,6 +40,6 @@ return {
 			DEFAULT = {Initial = 2, Reserve = 4}
 		},
 	},
-	Scripts = {"fighter-spawn"},
+	Scripts = {"fighter-spawn", "turn-station"},
 	Flags = {SHIPYARD = true, HANGAR = true}
 }
